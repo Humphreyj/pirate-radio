@@ -27,6 +27,7 @@ const InfoPanel = () => {
     margin: 0 auto;
     padding: 2%;
     font-family: 'Roboto Slab', serif;
+    background-color: rgba(196,196,196, .3);
     
     `
     return (

@@ -6,7 +6,7 @@ const header = () => {
 
     const Trial = styled.p`
     font-family: 'Odibee Sans', cursive;
-    color: white;
+    color: rgba(255,255,255, .4);
     `
     const Banner = styled.div`
     display: flex;
