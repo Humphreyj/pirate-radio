@@ -7,13 +7,17 @@ const header = () => {
     const Trial = styled.p`
     font-family: 'Odibee Sans', cursive;
     color: rgba(255,255,255, .4);
+    padding-bottom: 1%;
+    
     `
     const Banner = styled.div`
     display: flex;
     justify-content: space-between;
     padding:  0% 3%;
+    margin-top: -1em;
     font-family: 'Tomorrow', sans-serif;
-    background-color: rgba(196,196,196, .3);
+    background-color: rgba(140, 140, 134, .3);
+    color: rgba(255,255,255, .9);
     `
 
     return (

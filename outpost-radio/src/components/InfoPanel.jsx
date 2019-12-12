@@ -20,6 +20,9 @@ const InfoPanel = () => {
             text-decoration: none;
             color: white;
         }
+        a:hover {
+            color: rgba(129, 178, 60, 0.6)
+        }
     }
     `
     const Info = styled.div`
@@ -27,7 +30,7 @@ const InfoPanel = () => {
     margin: 0 auto;
     padding: 2%;
     font-family: 'Roboto Slab', serif;
-    background-color: rgba(196,196,196, .3);
+    background-color: rgba(140, 140, 134, .3);
     
     `
     return (
