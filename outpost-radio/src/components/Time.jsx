@@ -6,14 +6,15 @@ import styled from 'styled-components';
 
 
 const Time = () => {
-
+    
     const [time, updatetime] = useState({
         year: '',
         month:'',
         day: '',
         hour: '',
         minute: '',
-        second: ''
+        second: '',
+        greeting: ''
     });
     
     useEffect(() => {
@@ -25,7 +26,15 @@ const Time = () => {
             let hour = today.getHours();
             let minutes = today.getMinutes();
             let seconds = today.getSeconds();
-            console.log(month,day, year);
+            let greeting = '';
+            
+            if(hour < 12) {
+                greeting = "Good Morning, Citizen."
+            }else if(hour < 18) {
+                greeting = "Good Afternoon, Citizen."
+            }else {
+                greeting = "Good Evening, Citizen."
+            }
     
             updatetime({
                 year: year,
@@ -33,12 +42,20 @@ const Time = () => {
                 day: day,
                 hour: hour,
                 minutes: minutes,
-                seconds: seconds
+                seconds: seconds,
+                greeting:greeting
             })
-    
+            
             setTimeout(showTime,1000);
+            
         }
+
+        const showGreeting = () => {
+            
+        }
+        showGreeting();
         showTime();
+
     },[])
 
     const TimeWrap = styled.div`
@@ -59,6 +76,12 @@ const Time = () => {
     justify-content: space-evenly;
     width: 20%;
     `
+    const Greeting = styled.h5`
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    `
+
     const addZero = (num) => {
         return(parseInt(num, 10) < 10 ? '0': '') + num;
         
@@ -72,7 +95,10 @@ const Time = () => {
                 <p>-</p>
                 <p>{time.year}</p>
             </DateWrap>
+            <Greeting>{time.greeting}</Greeting>
+            
             <CurrentTime>
+            
                 <p>{addZero(time.hour)} </p>
                 <p>:</p>
                 <p>{addZero(time.minutes)}</p>

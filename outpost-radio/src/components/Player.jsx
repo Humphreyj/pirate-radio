@@ -8,6 +8,7 @@ const Player = () => {
     width: 60%;
     padding: 2%;
     border: 1px solid rgba(140, 140, 134, .9);
+    border-radius: 8px;
     
     
     margin: 2em auto;

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import styled from 'styled-components';
 import Home from './Home';
 import Team from './Team';
@@ -19,9 +21,12 @@ const InfoPanel = () => {
         a {
             text-decoration: none;
             color: white;
+            padding: 1%;
         }
         a:hover {
-            color: rgba(129, 178, 60, 0.6)
+            background-color: rgba(129, 178, 60, 0.6);
+            color: #111;
+            font-weight: bold;
         }
     }
     `
@@ -33,6 +38,7 @@ const InfoPanel = () => {
     background-color: rgba(140, 140, 134, .3);
     
     `
+    
     return (
         <div>
             <Panel>
