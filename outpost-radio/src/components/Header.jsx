@@ -7,7 +7,7 @@ const header = () => {
     const Trial = styled.p`
     font-family: 'Odibee Sans', cursive;
     color: rgba(255,255,255, .4);
-    padding-bottom: 1%;
+    margin-top: -1px;
     
     `
     const Banner = styled.div`

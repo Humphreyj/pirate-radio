@@ -5,11 +5,16 @@ import 'react-dropdown/style.css';
 import styled from 'styled-components';
 import Home from './Home';
 import Team from './Team';
-import Contact from './Contact';
+import Support from './Support';
 
 const InfoPanel = () => {
 
     const Panel = styled.div`
+    padding: 3%;
+    margin-top: -6em;
+    margin-bottom: 3em;
+    
+    height: 15em;
 
     nav {
         display: flex;
@@ -36,6 +41,7 @@ const InfoPanel = () => {
     padding: 2%;
     font-family: 'Roboto Slab', serif;
     background-color: rgba(140, 140, 134, .3);
+    color: rgba(255,255,255, .9);
     
     `
     
@@ -45,12 +51,12 @@ const InfoPanel = () => {
                 <nav>
                     <Link to='/'>Home</Link>
                     <Link to='/team'>Team</Link>
-                    <Link to='/contact'>Contact</Link>
+                    <Link to='/contact'>Support</Link>
                 </nav>
                 <Info>
                     <Route exact path='/' component={Home}/>
                     <Route path='/team' component={Team} />
-                    <Route path = '/contact' component={Contact}/>
+                    <Route path = '/contact' component={Support}/>
                 </Info>
 
             </Panel>
