@@ -5,7 +5,10 @@ import styled from 'styled-components';
 const Support = () => {
 
     const SupportWrap = styled.div`
-    padding: 2%;
+    overflow-y: scroll;
+    height: 10em;
+    box-sizing: content-box;
+   
 
     a {
         text-decoration: none;
