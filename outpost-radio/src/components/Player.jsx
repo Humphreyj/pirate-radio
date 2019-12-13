@@ -5,10 +5,11 @@ import Time from './Time';
 const Player = () => {
 
     const PlayerWrap = styled.div`
-    width: 60%;
+    width: 100%;
     padding: 2%;
     border: 1px solid rgba(140, 140, 134, .9);
     border-radius: 8px;
+    
     
     
     margin: 2em auto;
@@ -21,12 +22,15 @@ const Player = () => {
         
         color: red;
         background-color: rgba(129, 178, 60, .3);
-        width: 80%;
+        
         padding: 2%;
         border: 0;
         
     }
     
+    @media(min-width: 800px) {
+        width: 30em;
+    }
     
     `
 

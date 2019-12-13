@@ -8,6 +8,7 @@ const Team = () => {
     overflow-y: scroll;
     height: 10em;
     box-sizing: content-box;
+    width: 100%;
 
     ul {
         list-style: none;
@@ -16,16 +17,21 @@ const Team = () => {
             padding: .25em;
         }
     }
+    @media(min-width: 800px) {
+        width: 45em;
+        height: 15em;
+        margin: 0 auto;
+    }
 
     `
     return (
         <TeamWrap>
             <p>Station Director: Alibyte</p>
             <p>Executive Producer: BloodEagle</p>
-            <ul>Artist:
-                <li>Harpur</li>
-            </ul>
-            <ul>Voice Actors:
+            <h6>Artist</h6>
+            <p>Harpur</p>
+            
+            {/* <ul>Voice Actors:
                 <li>BloodEagle</li>
                 <li>M_James</li>
                 <li>Bear</li>
@@ -43,7 +49,7 @@ const Team = () => {
                 <li>firejar710</li>
                 <li>Rosseyn</li>
                 <li>Varian_Halai</li>
-            </ul>
+            </ul> */}
         </TeamWrap>
     );
 }

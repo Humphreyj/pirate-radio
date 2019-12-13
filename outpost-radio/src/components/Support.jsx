@@ -16,6 +16,14 @@ const Support = () => {
         padding-top: 1em;
         
     }
+    @media(min-width: 800px) {
+        width: 45em;
+        height: 15em;
+        margin: 0 auto;
+        overflow-y: auto;
+        box-sizing: border-box;
+        
+    }
     `
     return (
         <SupportWrap>

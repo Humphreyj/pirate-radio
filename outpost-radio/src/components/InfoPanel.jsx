@@ -11,10 +11,10 @@ const InfoPanel = () => {
 
     const Panel = styled.div`
     padding: 3%;
-    margin-top: -6em;
-    margin-bottom: 3em;
+    display: flex; 
+    flex-direction: column;
     
-    height: 15em;
+    
 
     nav {
         display: flex;
@@ -23,16 +23,22 @@ const InfoPanel = () => {
         font-family: 'Saira Semi Condensed', sans-serif;
         font-size: 1.3em;
         
+        
         a {
             text-decoration: none;
             color: white;
             padding: 1%;
         }
-        a:hover {
-            background-color: rgba(129, 178, 60, 0.6);
-            color: #111;
-            font-weight: bold;
+        @media(min-width: 800px) {
+            width: 100%;
         }
+        
+        
+    }
+
+    @media(min-width: 800px) {
+        width: 45em;
+        height: 30em;
     }
     `
     const Info = styled.div`
@@ -42,11 +48,13 @@ const InfoPanel = () => {
     font-family: 'Roboto Slab', serif;
     background-color: rgba(140, 140, 134, .3);
     color: rgba(255,255,255, .9);
-    
+    @media(min-width: 800px) {
+        width: 45em;
+    }
     `
     
     return (
-        <div>
+        
             <Panel>
                 <nav>
                     <Link to='/'>Home</Link>
@@ -61,7 +69,7 @@ const InfoPanel = () => {
 
             </Panel>
             
-        </div>
+        
     );
 }
 

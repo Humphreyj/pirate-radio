@@ -14,6 +14,7 @@ const header = () => {
     const Banner = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding:  0% 3%;
     margin-top: -1em;
     font-family: 'Tomorrow', sans-serif;
@@ -22,11 +23,15 @@ const header = () => {
 
     img {
         width: 25%;
+        @media(min-width: 800px) {
+            width: 10em;
+            height: 5em;
+        }
     }
     h4 {
         font-size: 1.1em;
         @media(min-width: 800px) {
-            font-size: 2em;
+            font-size: 1.2em;
         }
     }
     `
