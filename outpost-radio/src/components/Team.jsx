@@ -22,6 +22,9 @@ const Team = () => {
         <TeamWrap>
             <p>Station Director: Alibyte</p>
             <p>Executive Producer: BloodEagle</p>
+            <ul>Artist:
+                <li>Harpur</li>
+            </ul>
             <ul>Voice Actors:
                 <li>BloodEagle</li>
                 <li>M_James</li>
