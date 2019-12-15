@@ -3,31 +3,33 @@ import { Route, Link } from 'react-router-dom';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import styled from 'styled-components';
-import Home from './Home';
-import Team from './Team';
-import Support from './Support';
+import Home from './info/Home';
+import Team from './info/Team';
+import Support from './info/Support';
 
 const InfoPanel = () => {
 
     const Panel = styled.div`
-    padding: 3%;
+    padding: 1%;
     display: flex; 
     flex-direction: column;
+   
     
     
 
     nav {
         display: flex;
-        justify-content: space-evenly;
-        margin-top: 2em;
-        font-family: 'Saira Semi Condensed', sans-serif;
+        font-family: 'Tomorrow', sans-serif;
+        justify-content: flex-start;
+        align-items: center;
         font-size: 1.3em;
+        border: 2px solid rgba(255,255,255, .9);
         
         
         a {
             text-decoration: none;
             color: white;
-            padding: 1%;
+            margin: 0 .25em;
         }
         @media(min-width: 800px) {
             width: 100%;
@@ -37,8 +39,10 @@ const InfoPanel = () => {
     }
 
     @media(min-width: 800px) {
-        width: 45em;
+        width: 60%;
+        margin-left: 2em;
         height: 30em;
+        
     }
     `
     const Info = styled.div`
@@ -46,10 +50,9 @@ const InfoPanel = () => {
     margin: 0 auto;
     padding: 2%;
     font-family: 'Roboto Slab', serif;
-    background-color: rgba(140, 140, 134, .3);
     color: rgba(255,255,255, .9);
     @media(min-width: 800px) {
-        width: 45em;
+        width: 95%;
     }
     `
     
@@ -57,9 +60,9 @@ const InfoPanel = () => {
         
             <Panel>
                 <nav>
-                    <Link to='/'>Home</Link>
-                    <Link to='/team'>Team</Link>
-                    <Link to='/contact'>Support</Link>
+                    <Link to='/'>home</Link>
+                    <Link to='/team'>team</Link>
+                    <Link to='/contact'>support</Link>
                 </nav>
                 <Info>
                     <Route exact path='/' component={Home}/>

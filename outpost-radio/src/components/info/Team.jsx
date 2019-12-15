@@ -18,7 +18,7 @@ const Team = () => {
         }
     }
     @media(min-width: 800px) {
-        width: 45em;
+        width: 100%;
         height: 15em;
         margin: 0 auto;
     }

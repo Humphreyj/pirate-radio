@@ -17,8 +17,8 @@ const Support = () => {
         
     }
     @media(min-width: 800px) {
-        width: 45em;
-        height: 15em;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
         overflow-y: auto;
         box-sizing: border-box;

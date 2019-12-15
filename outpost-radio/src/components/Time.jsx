@@ -76,9 +76,8 @@ const Time = () => {
     justify-content: space-evenly;
     width: 20%;
     `
-    const Greeting = styled.h5`
+    const Greeting = styled.p`
     font-family: 'Roboto Slab', serif;
-    font-size: 1.1em;
     letter-spacing: .1em;
     `
 

@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Time from './Time';
+import bannerLogo from '../img/outpost-banner.png';
+
 
 const Player = () => {
 
     const PlayerWrap = styled.div`
-    width: 100%;
-    padding: 2%;
-    border: 1px solid rgba(140, 140, 134, .9);
-    border-radius: 8px;
+    width: 90%;
+    margin: 0 auto;
+    height: 30em;
+    padding: 3%;
+
     
     
     
@@ -22,34 +24,46 @@ const Player = () => {
         
         color: red;
         background-color: rgba(129, 178, 60, .3);
-        
+        margin: 0 auto;
         padding: 2%;
         border: 0;
         
     }
     
     @media(min-width: 800px) {
-        width: 30em;
+        width: 35em;
+        height: 30em;
     }
     
+    `
+    const Banner = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0% 3%;
+    margin-top: -1em;
+    
+
+    img {
+        width: 50%;
+        @media(min-width: 800px) {
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
     `
 
     
     return (
         <div>
             <PlayerWrap>
-                <h3>/Outpost_Radio/</h3>
-                <Time/>
-                {/* <ReactPlayer 
-                url='https:\/\/sync.outpost.radio\/radio\/8000\/radio.mp3?1576106012' 
-                playing
-                controls={true}
-                display= 'inline-block'
-                width= '80%'
                 
-                 /> */}
+                <Banner>
+                <img src={bannerLogo} alt="outpost radio logo"/>
+            </Banner>
+               
 
-<iframe title='playa' src="https://sync.outpost.radio/public/comms/embed"  allowtransparency="true"></iframe>
+<iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' margin='0 auto'  allowtransparency="true"></iframe>
   }
                 
             </PlayerWrap>

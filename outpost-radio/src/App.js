@@ -12,11 +12,13 @@ function App() {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 99%;
+  margin: 0 auto;
+  border: 2px solid rgba(255,255,255, .9);
 
   @media(min-width: 800px) {
     flex-direction: row;
-    justify-content:space-evenly;
+    
   }
   `
   return (
