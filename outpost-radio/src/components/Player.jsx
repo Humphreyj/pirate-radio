@@ -39,6 +39,7 @@ const Player = () => {
     const Banner = styled.div`
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding:  0% 3%;
     margin-top: -1em;
@@ -51,7 +52,24 @@ const Player = () => {
             margin: 0 auto;
         }
     }
+
+    .trialWrap {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 99%;
+        margin: 0 auto;
+    }
     `
+
+    const Trial = styled.p`
+    font-family: 'Odibee Sans', cursive;
+    color: rgba(255,255,255, .4);
+    margin-top: -1px;
+    text-align: center;
+    
+    `
+    
 
     
     return (
@@ -60,6 +78,10 @@ const Player = () => {
                 
                 <Banner>
                 <img src={bannerLogo} alt="outpost radio logo"/>
+                <div className="trialWrap">
+                    <Trial>starSTRM v1.9.4a /unlicensed copy*/</Trial>
+                </div>
+                
             </Banner>
                
 
