@@ -6,13 +6,19 @@ import styled from 'styled-components';
 import Home from './info/Home';
 import Team from './info/Team';
 import Support from './info/Support';
+import Console from './Console';
+import Comms from './info/Comms';
 
 const InfoPanel = () => {
 
     const Panel = styled.div`
-    padding: 1%;
+    padding: 0% 1%;
+    margin-top: 1em;
     display: flex; 
     flex-direction: column;
+    
+    
+    
    
     
     
@@ -24,6 +30,7 @@ const InfoPanel = () => {
         align-items: center;
         font-size: 1.3em;
         border: 2px solid rgba(255,255,255, .9);
+        margin-top: -2%;
         
         
         a {
@@ -39,17 +46,19 @@ const InfoPanel = () => {
     }
 
     @media(min-width: 800px) {
-        width: 60%;
+        width: 55%;
         margin-left: 2em;
+        margin-top: 0em;
         height: 30em;
+        border-left: 2px dashed rgba(255,255,255, .9);
         
     }
     `
     const Info = styled.div`
     width: 60%;
     margin: 0 auto;
-    padding: 2%;
-    font-family: 'Roboto Slab', serif;
+    padding:  2%;
+    font-family: 'Tomorrow', serif;
     color: rgba(255,255,255, .9);
     @media(min-width: 800px) {
         width: 95%;
@@ -61,14 +70,17 @@ const InfoPanel = () => {
             <Panel>
                 <nav>
                     <Link to='/'>home</Link>
+                    <Link to='/comm-links'>comm-links</Link>
                     <Link to='/team'>team</Link>
                     <Link to='/contact'>support</Link>
                 </nav>
                 <Info>
                     <Route exact path='/' component={Home}/>
+                    <Route path = '/comm-links' component={Comms}/>
                     <Route path='/team' component={Team} />
                     <Route path = '/contact' component={Support}/>
                 </Info>
+                <Console />
 
             </Panel>
             

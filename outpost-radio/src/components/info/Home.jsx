@@ -5,6 +5,7 @@ import Time from '../Time';
 const Home = () => {
 
 const HomeWrap =  styled.div`
+
 @media(min-width: 800px) {
     width: 100%;
     height: 100%;

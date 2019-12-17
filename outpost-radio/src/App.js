@@ -13,8 +13,8 @@ function App() {
   justify-content: center;
   align-items: center;
   width: 99%;
-  margin: 0 auto;
-  border: 2px solid rgba(255,255,255, .9);
+  margin: 2em auto 0em auto;
+  
 
   @media(min-width: 800px) {
     flex-direction: row;

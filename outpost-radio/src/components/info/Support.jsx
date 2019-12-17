@@ -7,6 +7,7 @@ const Support = () => {
     const SupportWrap = styled.div`
     overflow-y: scroll;
     height: 10em;
+    width: 100%;
     box-sizing: content-box;
    
 
@@ -18,7 +19,7 @@ const Support = () => {
     }
     @media(min-width: 800px) {
         width: 100%;
-        height: 100%;
+        height: 15em;
         margin: 0 auto;
         overflow-y: auto;
         box-sizing: border-box;

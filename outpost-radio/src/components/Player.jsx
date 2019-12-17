@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import bannerLogo from '../img/outpost-banner.png';
+import Feed from './Feed';
 
 
 const Player = () => {
@@ -8,13 +9,11 @@ const Player = () => {
     const PlayerWrap = styled.div`
     width: 90%;
     margin: 0 auto;
-    height: 30em;
-    padding: 3%;
+    height: 100%;
+    padding: 0% 3%;
+    display: flex;
+    flex-direction: column;
 
-    
-    
-    
-    margin: 2em auto;
     background-color: black;
     h3 {
         color: white;
@@ -31,8 +30,10 @@ const Player = () => {
     }
     
     @media(min-width: 800px) {
-        width: 35em;
-        height: 30em;
+        width: 33em;
+        height: 32em;
+        margin-right: 1em;
+        
     }
     
     `
@@ -42,13 +43,13 @@ const Player = () => {
     flex-direction: column;
     align-items: center;
     padding:  0% 3%;
-    margin-top: -1em;
+    
     
 
     img {
         width: 50%;
         @media(min-width: 800px) {
-            width: 60%;
+            width: 30%;
             margin: 0 auto;
         }
     }
@@ -85,9 +86,9 @@ const Player = () => {
             </Banner>
                
 
-<iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' margin='0 auto'  allowtransparency="true"></iframe>
-  }
-                
+<iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' height='25%' margin='0 auto'  allowtransparency="true"></iframe>
+  
+                <Feed />
             </PlayerWrap>
             
         </div>
