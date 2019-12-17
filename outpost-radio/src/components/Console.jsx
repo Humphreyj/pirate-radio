@@ -1,7 +1,10 @@
 import React,{ useState,useEffect } from 'react';
 import styled from 'styled-components';
+import Terminal from 'terminal-in-react';
 
 const InputWrap = styled.div`
+display: flex;
+justify-content: center;
 width: 99%;
 margin: 0 auto;
 height: 7em;
@@ -14,6 +17,10 @@ margin-bottom: 2em;
 }
 p {
     color: rgba(255,255,255, .9);
+}
+
+.term {
+    height: 2em;
 }
 
 `
@@ -60,18 +67,41 @@ const Console = () => {
     updateInputText({...inputText,content: inputText.content = event.target.value})
     console.log(inputText.content)
     }
+
+    const showMsg = () => 'Hello World'
     
 
     return (
         <InputWrap>
-            <Input
+            {/* <Input
             type='text'
             placeholder='ready...'
             value={inputText.content}
             onChange={changeHandler}
             onKeyPress={handleKeyPress} />
             
-            <p>{inputText.return}</p>
+            <p>{inputText.return}</p> */}
+
+<Terminal className='term'
+          color='red'
+          backgroundColor='black'
+          barColor='black'
+          hideTopBar='true'
+          allowTabs='false'
+          startState='maximised'
+          style={{ fontWeight: "bold", fontSize: "1em", height:'13em',width: '100%' }}
+          commands={{
+            'open-google': () => window.open('https://www.google.com/', '_blank'),
+            showmsg: showMsg,
+            popup: () => alert('Terminal in React')
+          }}
+          descriptions={{
+            'open-google': 'opens google.com',
+            showmsg: 'shows a message',
+            alert: 'alert', popup: 'alert'
+          }}
+          msg='Get Stared...'
+        />
             
         </InputWrap>
     );
