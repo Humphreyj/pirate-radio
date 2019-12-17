@@ -1,13 +1,10 @@
 import React,{ useState,useEffect } from 'react';
 import styled from 'styled-components';
 
-
-const Input = styled.textarea`
+const InputWrap = styled.div`
 width: 99%;
 margin: 0 auto;
 height: 7em;
-background-color: #111;
-color: rgba(255,255,255, .9);
 margin-top: .5%;
 margin-bottom: 2em;
 @media(min-width: 1000px) {
@@ -15,15 +12,48 @@ margin-bottom: 2em;
     height: 15em;
     margin-bottom: 0em;
 }
+p {
+    color: rgba(255,255,255, .9);
+}
+
+`
+const Input = styled.input`
+width: 99%;
+margin: 0 auto;
+background-color: #111;
+color: rgba(255,255,255, .9);
+
 `
 
 const Console = () => {
 
     const [inputText, updateInputText] = useState({
-        content: ''
+        content: '',
+        return: ''
     })
 
+    const getReturn = () => {
+        if(inputText.content==='SPCBSTRDS') {
+            updateInputText({...inputText,return: inputText.return = 'The Space Bastards are group of law abiding traders and salvagers.'})
+            window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank')
+        }
+        if(inputText.content==='info Alibyte') {
+            updateInputText({...inputText,return: inputText.return = 'Alibyte is the founder and director of Outpost Radio.'}) 
+        }
+        if(inputText.content==='info BloodEagle') {
+            updateInputText({...inputText,return: inputText.return = 'Blood Eagle is the Executive Producer of Outpost Radio.'}) 
+        }
+        
+    }
+
    
+
+   const handleKeyPress = (event) => {
+        if(event.key === 'Enter'){
+           getReturn();
+            updateInputText({...inputText,content: inputText.content = ''})
+        }
+      }
 
 
     const changeHandler = (event) => {
@@ -33,13 +63,17 @@ const Console = () => {
     
 
     return (
-        <div>
+        <InputWrap>
             <Input
             type='text'
+            placeholder='ready...'
             value={inputText.content}
-            onChange={changeHandler} />
+            onChange={changeHandler}
+            onKeyPress={handleKeyPress} />
             
-        </div>
+            <p>{inputText.return}</p>
+            
+        </InputWrap>
     );
 }
 
