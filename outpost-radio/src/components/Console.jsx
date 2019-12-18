@@ -69,6 +69,13 @@ const Console = () => {
     }
 
     const showMsg = () => 'Hello World'
+
+    const bastards = () => {
+        window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
+
+        return 'The Space Bastards are a legitimate group of traders and salvagers.'
+
+    }
     
 
     return (
@@ -93,14 +100,16 @@ const Console = () => {
           commands={{
             'open-google': () => window.open('https://www.google.com/', '_blank'),
             showmsg: showMsg,
-            popup: () => alert('Terminal in React')
+            'SPCBST': () => bastards() ,
+            popup: () => alert('Terminal in React'),
+            'info-alibyte': () => 'Alibyte is the station director.'
           }}
           descriptions={{
             'open-google': 'opens google.com',
             showmsg: 'shows a message',
             alert: 'alert', popup: 'alert'
           }}
-          msg='Get Stared...'
+          msg='Get Started...'
         />
             
         </InputWrap>

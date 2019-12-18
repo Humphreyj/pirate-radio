@@ -88,7 +88,7 @@ const Player = () => {
 
 <iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' height='25%' margin='0 auto'  allowtransparency="true"></iframe>
   
-                <Feed />
+                {/* <Feed /> */}
             </PlayerWrap>
             
         </div>

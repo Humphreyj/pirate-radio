@@ -28,7 +28,6 @@ const InfoPanel = () => {
         font-family: 'Tomorrow', sans-serif;
         justify-content: flex-start;
         align-items: center;
-        font-size: 1.3em;
         border: 2px solid rgba(255,255,255, .9);
         margin-top: -2%;
         
@@ -38,8 +37,9 @@ const InfoPanel = () => {
             color: white;
             margin: 0 .25em;
         }
-        @media(min-width: 800px) {
+        @media(min-width: 1000px) {
             width: 100%;
+            font-size: 1.3em;
         }
         
         
