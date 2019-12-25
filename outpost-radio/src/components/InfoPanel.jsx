@@ -16,6 +16,7 @@ const InfoPanel = () => {
     margin-top: 1em;
     display: flex; 
     flex-direction: column;
+    width: 100%;
     
     
     

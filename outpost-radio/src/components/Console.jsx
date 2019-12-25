@@ -68,12 +68,14 @@ const Console = () => {
     console.log(inputText.content)
     }
 
-    const showMsg = () => 'Hello World'
+   
 
     const bastards = () => {
-        window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
-
+        
+        
+        setTimeout(window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank'), 3000);
         return 'The Space Bastards are a legitimate group of traders and salvagers.'
+        
 
     }
     
@@ -96,16 +98,14 @@ const Console = () => {
           hideTopBar='true'
           allowTabs='false'
           startState='maximised'
-          style={{ fontWeight: "bold", fontSize: "1em", height:'13em',width: '100%' }}
+          style={{ fontWeight: "bold", fontSize: "1em", height:'13em',width: '100%', boxSizing: 'content-box' }}
           commands={{
-            'open-google': () => window.open('https://www.google.com/', '_blank'),
-            showmsg: showMsg,
             'SPCBST': () => bastards() ,
             popup: () => alert('Terminal in React'),
-            'info-alibyte': () => 'Alibyte is the station director.'
+            'info-alibyte': () => 'Alibyte is the founder and director of Outpost Radio.'
           }}
           descriptions={{
-            'open-google': 'opens google.com',
+            
             showmsg: 'shows a message',
             alert: 'alert', popup: 'alert'
           }}

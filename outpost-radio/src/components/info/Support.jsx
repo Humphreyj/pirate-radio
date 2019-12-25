@@ -8,6 +8,7 @@ const Support = () => {
     overflow-y: scroll;
     height: 10em;
     width: 100%;
+    padding-right: 30%;
     box-sizing: content-box;
    
 

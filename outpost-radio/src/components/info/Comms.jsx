@@ -5,6 +5,7 @@ overflow-y: scroll;
 height: 10em;
 width: 100%;
 box-sizing: content-box;
+padding-right: 30%;
 
 
 a {
