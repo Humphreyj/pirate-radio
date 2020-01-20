@@ -1,98 +1,70 @@
 import React from 'react';
 import styled from 'styled-components';
 import bannerLogo from '../img/outpost-banner.png';
-import Feed from './Feed';
-
+import { 
+  // color,
+  screen, 
+} from '../util';
 
 const Player = () => {
-
-    const PlayerWrap = styled.div`
-    width: 90%;
-    margin: 0 auto;
-    height: 100%;
-    padding: 0% 3%;
-    display: flex;
-    flex-direction: column;
-
+  const PlayerWrap = styled.div`
     background-color: black;
+    display: grid;
+    grid-area: player;
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+
     h3 {
-        color: white;
-        width: 20%;
+      color: white;
+      width: 20%;
     }
+    
     iframe {
-        
-        color: red;
-        background-color: rgba(129, 178, 60, .3);
-        margin: 0 auto;
-        padding: 2%;
-        border: 0;
-        
+      align-self: center;
+      background-color: transparent;
+      border: 0;
+      color: red;
+      height: 8.75rem;
+      margin: 0 auto;
+      padding: 1rem;
     }
     
-    @media(min-width: 800px) {
-        width: 33em;
-        height: 32em;
-        margin-right: 1em;
-        
+    @media (max-width: ${screen.md - 1}px) {
+      height: 32rem;
     }
-    
-    `
-    const Banner = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+
+    @media (min-width: ${screen.md}px) {
+      height: 32rem;
+    }
+  `;
+
+  const Banner = styled.div`
     align-items: center;
-    padding:  0% 3%;
-    
-    
+    display: grid;
+    justify-content: space-between;
+    padding:  0 1rem;
 
     img {
-        width: 50%;
-        @media(min-width: 800px) {
-            width: 30%;
-            margin: 0 auto;
-        }
-    }
+      width: 50%;
 
-    .trialWrap {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        width: 99%;
+      @media (min-width: ${screen.md}px) {
         margin: 0 auto;
+        width: 70%;
+      }
     }
-    `
+  `;
 
-    const Trial = styled.p`
-    font-family: 'Odibee Sans', cursive;
-    color: rgba(255,255,255, .4);
-    margin-top: -1px;
-    text-align: center;
-    
-    `
-    
 
-    
-    return (
-        <div>
-            <PlayerWrap>
-                
-                <Banner>
-                <img src={bannerLogo} alt="outpost radio logo"/>
-                <div className="trialWrap">
-                    <Trial>starSTRM v1.9.4a /unlicensed copy*/</Trial>
-                </div>
-                
-            </Banner>
-               
-
-<iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' height='25%' margin='0 auto'  allowtransparency="true"></iframe>
-  
-                {/* <Feed /> */}
-            </PlayerWrap>
-            
-        </div>
-    );
+  return (
+    <PlayerWrap>
+      <Banner>
+        <img src={bannerLogo} alt="outpost radio logo" />
+      </Banner>
+      <iframe title='playa' src="https://sync.outpost.radio/public/comms/embed" width='96%' height='25%' margin='0 auto' allowtransparency="true"></iframe>
+      {/* <Feed /> */}
+    </PlayerWrap>
+  );
 }
 
 export default Player;
