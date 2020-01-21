@@ -7,10 +7,10 @@ import {
 
 const Header = () => {
   const TrialWrap = styled.div`
-    align-items: center;
     display: grid;
+    grid-area: header;
     justify-content: end;
-    margin: 0 auto;
+    width: 100%;
   `;
   const Trial = styled.p`
     color: ${color.lightBlackish};
