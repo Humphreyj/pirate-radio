@@ -1,40 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import { 
+  color, 
+  screen, 
+} from '../../util';
+
+
 const CommsWrap = styled.div`
-overflow-y: scroll;
-height: 10em;
-width: 100%;
-box-sizing: content-box;
-padding-right: 30%;
+  overflow-y: scroll;
+  width: 100%;
 
-
-a {
+  a {
+    color: ${color.whitish};
     text-decoration: none;
-    color: rgba(255,255,255, .9);
-    padding-top: 1em;
-    
-}
+    padding-top: 1rem;
+  }
 
-h5 {
+  h5 {
     width: 100%;
-}
-@media(min-width: 800px) {
-    width: 100%;
-    height: 15em;
+  }
+
+  @media (min-width: ${screen.md}px) {
+    box-sizing: border-box;
     margin: 0 auto;
     overflow-y: auto;
-    box-sizing: border-box;
-    
-}
-`
-
+    width: 100%;
+  }
+`;
 
 const Comms = () => {
-    return (
-        <CommsWrap>
-            <h5>Stay Tuned for updates!</h5>
-        </CommsWrap>
-    );
-}
+  return (
+    <CommsWrap>
+      <h5>Stay Tuned for updates!</h5>
+    </CommsWrap>
+  );
+};
 
 export default Comms;
