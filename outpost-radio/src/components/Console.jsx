@@ -38,6 +38,7 @@ const InputWrap = styled.div`
 // `;
 
 const Console = () => {
+
   // const [inputText, updateInputText] = useState({
   //   content: '',
   //   return: '',
@@ -115,6 +116,7 @@ const Console = () => {
       */}
     </InputWrap>
   );
+
 }
 
 export default Console;

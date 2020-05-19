@@ -10,6 +10,7 @@ import {
 } from '../util';
 
 const InfoPanel = () => {
+
   const InfoPanel = styled.div`
     display: grid;
     grid-area: infopanel;
@@ -22,6 +23,7 @@ const InfoPanel = () => {
     justify-content: space-between;
     margin-top: 0;
   `;
+
     
   return (
     <InfoPanel>
