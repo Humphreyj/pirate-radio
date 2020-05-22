@@ -9,6 +9,7 @@ import {
   screen, 
 } from './util';
 import borderImg from './img/border.svg';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
 
@@ -53,14 +54,17 @@ function App() {
   `;
 
   return (
-    <div className="App">
-      <Header className="body-width" />
-      <Container className="body-width">
-        <Player />
-        <Border />
-        <InfoPanel />
-      </Container>
-    </div>
+    <Router>
+        <div className="App">
+        <Header className="body-width" />
+        <Container className="body-width">
+          <Player />
+          <Border />
+          <InfoPanel />
+        </Container>
+      </div>
+    </Router>
+    
   );
 }
 

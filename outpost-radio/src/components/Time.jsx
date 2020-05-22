@@ -85,7 +85,7 @@ const Time = () => {
   return (
     <TimeWrap>
       <DateWrap>
-        <p>{addZero(time.month)}</p>
+        <p>{addZero(time.month + 1)}</p>
         <p>-</p>
         <p>{addZero(time.day)}</p>
         <p>-</p>

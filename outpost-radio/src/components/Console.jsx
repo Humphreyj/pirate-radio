@@ -39,37 +39,15 @@ const InputWrap = styled.div`
 
 const Console = () => {
 
+
   // const [inputText, updateInputText] = useState({
   //   content: '',
   //   return: '',
   // });
 
-  // const getReturn = () => {
-  //   if(inputText.content==='SPCBSTRDS') {
-  //     updateInputText({...inputText,return: inputText.return = 'The Space Bastards are group of law abiding traders and salvagers.'});
-  //     window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
-  //   }
-  //   if(inputText.content==='info Alibyte') {
-  //     updateInputText({...inputText,return: inputText.return = 'Alibyte is the founder and director of Outpost Radio.'});
-  //   }
-  //   if(inputText.content==='info BloodEagle') {
-  //     updateInputText({...inputText,return: inputText.return = 'Blood Eagle is the Executive Producer of Outpost Radio.'});
-  //   }
-  // }
 
-  // const handleKeyPress = (event) => {
-  //   if (event.key === 'Enter') {
-  //     getReturn();
-  //     updateInputText({...inputText,content: inputText.content = ''});
-  //   }
-  // }
 
-  // const changeHandler = (event) => {
-  //   updateInputText({...inputText,content: inputText.content = event.target.value});
-  //   console.log(inputText.content);
-  // }
-
-  const showMsg = () => 'Hello World';
+  const showMsg = () => 'Thank you for listening to Outpost radio!';
 
   const bastards = () => {
     window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
@@ -85,35 +63,22 @@ const Console = () => {
         className='term'
         color='red'
         commands={{
-          'open-google': () => window.open('https://www.google.com/', '_blank'),
-          showmsg: showMsg,
+          show_msg: showMsg,
           'SPCBST': () => bastards() ,
-          popup: () => alert('Terminal in React'),
-          'info-alibyte': () => 'Alibyte is the station director.',
+          get_station_info: ()=> 'Outpost Radio was founded by Alibyte and BloodEagle in 2949',
+          
+          
         }}
         descriptions={{
-          'open-google': 'opens google.com',
-          showmsg: 'shows a message',
-          popup: 'alert',
-          alert: 'alert', 
+          get_station_info: 'Displays info about the station.',
+
+        
         }}
         hideTopBar={true}
-        msg='Get Started...'
+        msg='Get Started... type help for help'
         startState='maximised'
         style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight, width: '100%' }}
       />
-          
-      {/* 
-      <Input
-        type='text'
-        placeholder='ready...'
-        value={inputText.content}
-        onChange={changeHandler}
-        onKeyPress={handleKeyPress} 
-      />
-      
-      <p>{inputText.return}</p>
-      */}
     </InputWrap>
   );
 
