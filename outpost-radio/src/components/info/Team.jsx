@@ -39,12 +39,18 @@ const team = {
   ],
 }
 
+
 const Team = () => {
   const TeamWrap =  styled.div`
     height: 10rem;
     overflow-y: scroll;
     padding: 0 .5rem;
+
     width: 100%;
+    padding-right: 30%;
+    scrollbar-width: none;
+    
+
 
     ul {
       list-style: none;
@@ -57,8 +63,10 @@ const Team = () => {
     @media (min-width: ${screen.md}px) {
       width: 100%;
       // margin: 0 auto;
+
     }
   `;
+
 
   return (
     <TeamWrap>
@@ -99,5 +107,6 @@ const Team = () => {
     </TeamWrap>
   );
 };
+
 
 export default Team;

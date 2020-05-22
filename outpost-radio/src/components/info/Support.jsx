@@ -10,6 +10,7 @@ const Support = () => {
     overflow-y: scroll;
     width: 100%;
 
+
     a {
       text-decoration: none;
       color: ${color.whitish};

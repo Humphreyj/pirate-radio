@@ -12,6 +12,7 @@ const InputWrap = styled.div`
   grid-area: console;
   max-height: ${terminalHeight};
   margin: 0 auto 2rem;
+  overflow-y: hidden;
   width: 100%;
 
   p {
@@ -37,6 +38,13 @@ const InputWrap = styled.div`
 // `;
 
 const Console = () => {
+
+
+  // const [inputText, updateInputText] = useState({
+  //   content: '',
+  //   return: '',
+  // });
+
 
 
   const showMsg = () => 'Thank you for listening to Outpost radio!';
@@ -73,6 +81,7 @@ const Console = () => {
       />
     </InputWrap>
   );
+
 }
 
 export default Console;

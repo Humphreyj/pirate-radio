@@ -18,6 +18,7 @@ function App() {
     // border-image: url(${borderImg}) 30;
     // align-items: center;
     display: grid;
+    grid-area: body;
     grid-auto-flow: column;
     grid-gap: calc(1rem - 1px);
     justify-content: center;
@@ -36,6 +37,13 @@ function App() {
         "player border infopanel";
       grid-template-columns: 29rem 2px 29rem;
       max-width: ${screen.lg}px;
+    }
+
+    @media (min-width: ${screen.xl}px) {
+      grid-template-areas: 
+        "player border infopanel";
+      grid-template-columns: 36.5rem 2px 36.5rem;
+      max-width: ${screen.xl}px;
     }
   `;
 
