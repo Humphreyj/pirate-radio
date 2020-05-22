@@ -14,6 +14,7 @@ const team = {
     'BloodEagle', 
   ],
   artist: [
+    'Harpur'
 
   ],
   voice: [
@@ -61,16 +62,16 @@ const Team = () => {
 
   return (
     <TeamWrap>
-      {team.admin.forEach(admin => 
-        teamTitles[admin] ? `<p>{teamTitles[admin]}: {admin}</p>` : '')}
-      {Object.values(team).forEach(t => 
-        t.forEach(member => <p>{member}</p>)
-      )}
+      {team.admin.map(admin => 
+        teamTitles[admin] ? <p>{teamTitles[admin]}: {admin}</p> : '')}
+      {/* {Object.values(team).map(t => 
+        t.map(member => <p>{member}</p>)
+      )} */}
 
       {/* <p>Station Director: Alibyte</p>
       <p>Executive Producer: BloodEagle</p> */}
-      <h6>Artist</h6>
-      <p>Harpur</p>
+      {/* <h6>Artist</h6>
+      <p>Harpur</p> */}
       
       {
       /* 
