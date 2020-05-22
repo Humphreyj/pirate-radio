@@ -16,6 +16,7 @@ const Header = () => {
     color: ${color.lightBlackish};
     margin-top: .5rem;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
   `;
   return (
     <TrialWrap className="body-width">

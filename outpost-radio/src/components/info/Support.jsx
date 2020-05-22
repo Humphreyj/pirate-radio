@@ -9,7 +9,10 @@ const Support = () => {
   const SupportWrap = styled.div`
     overflow-y: scroll;
     width: 100%;
-
+    font-family: 'Press Start 2P', cursive;
+    h4 {
+      font-family: 'Press Start 2P', cursive;
+    }
     a {
       text-decoration: none;
       color: ${color.whitish};

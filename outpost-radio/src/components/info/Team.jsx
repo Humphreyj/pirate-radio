@@ -27,7 +27,7 @@ const team = {
   musician: [
 
   ],
-  writer: [
+  writers: [
     '-tkn-',
     'Capt_Ricven',
     'Mookie Merkk',
@@ -35,22 +35,44 @@ const team = {
     'Pariziel',
   ],
   devs: [
-
+    'Rosseyn',
+    'Varian_Halai'
   ],
 }
 
 const Team = () => {
   const TeamWrap =  styled.div`
-    height: 10rem;
+    height: 16rem;
     overflow-y: scroll;
     padding: 0 .5rem;
     width: 100%;
+    font-family: 'Press Start 2P', cursive;
 
     ul {
       list-style: none;
 
       li {
         padding: .25rem;
+      }
+    }
+    .department {
+      width: 100%;
+      h4 {
+        text-decoration: underline;
+        font-family: inherit;
+        text-align: center;
+      }
+      
+      div{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p {
+          margin: .5em 1em;
+        }
       }
     }
 
@@ -64,38 +86,29 @@ const Team = () => {
     <TeamWrap>
       {team.admin.map(admin => 
         teamTitles[admin] ? <p>{teamTitles[admin]}: {admin}</p> : '')}
-      {/* {Object.values(team).map(t => 
-        t.map(member => <p>{member}</p>)
-      )} */}
-
-      {/* <p>Station Director: Alibyte</p>
-      <p>Executive Producer: BloodEagle</p> */}
-      {/* <h6>Artist</h6>
-      <p>Harpur</p> */}
       
-      {
-      /* 
-      <ul>Voice Actors:
-          <li>BloodEagle</li>
-          <li>M_James</li>
-          <li>Bear</li>
-          <li>Gido</li>
-          <li>Locke</li>
-      </ul>
-      <ul>Writers:
-          <li>-tkn-</li>
-          <li>Capt_Ricven</li>
-          <li>Mookie Merkk</li>
-          <li>Paradox Obscuris</li>
-          <li>Pariziel</li>
-      </ul>
-      <ul>Developers:
-          <li>firejar710</li>
-          <li>Rosseyn</li>
-          <li>Varian_Halai</li>
-      </ul> 
-      */
-      }
+      <div className="voice-actors department">
+        <h4>Voice Actors</h4>
+        <div>
+        {team.voice.map(voice => <p>{voice}</p>)}
+        </div>
+      </div>
+
+      <div className="writers department">
+        <h4>Writers</h4>
+        <div>
+          {team.writers.map(writer => <p>{writer}</p> )}
+        </div>
+      </div>
+      <div className="devs department">
+        <h4>Developers</h4>
+        <div>
+          {team.devs.map(dev => <p>{dev}</p> )}
+        </div>
+      </div>
+      
+      
+
     </TeamWrap>
   );
 };
