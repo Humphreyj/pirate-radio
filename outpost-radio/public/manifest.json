@@ -1,25 +1,55 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Outpost Radio",
+  "name": "Outpost Radio - Voice of the High Frontier",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "white-trans/favicon.ico",
+      "sizes": "96x96 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "white-trans/favicon32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "white-trans/favicon57.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    },
+    {
+      "src": "white-trans/favicon76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "white-trans/favicon96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "white-trans/favicon128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "white-trans/favicon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "white-trans/favicon228.png",
+      "type": "image/png",
+      "sizes": "228x228"
+    },
+    {
+      "src": "white-trans/favicon512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e6e6e6",
+  "background_color": "#333333"
 }

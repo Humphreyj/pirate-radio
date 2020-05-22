@@ -40,13 +40,22 @@ const team = {
   ],
 }
 
+
 const Team = () => {
   const TeamWrap =  styled.div`
     height: 16rem;
     overflow-y: scroll;
     padding: 0 .5rem;
+
     width: 100%;
+<<<<<<< HEAD
     font-family: 'Press Start 2P', cursive;
+=======
+    padding-right: 30%;
+    scrollbar-width: none;
+    
+
+>>>>>>> e99b874f5ba86f89f35671a9c96d04f51c0e9caf
 
     ul {
       list-style: none;
@@ -79,8 +88,10 @@ const Team = () => {
     @media (min-width: ${screen.md}px) {
       width: 100%;
       // margin: 0 auto;
+
     }
   `;
+
 
   return (
     <TeamWrap>
@@ -112,5 +123,6 @@ const Team = () => {
     </TeamWrap>
   );
 };
+
 
 export default Team;

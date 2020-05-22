@@ -4,10 +4,11 @@ import { color } from '../util';
 
 const Feed = () => {
   const FeedWrap = styled.div`
-    background-color: black;
+    background-color: ${color.lightBlackish};
     color: ${color.whitish};
+    grid-area: feed;
     margin-top: 1rem;
-    padding:  3rem 1rem 0;
+    // padding:  3rem 1rem 0;
     text-align: center;
   `;
 
