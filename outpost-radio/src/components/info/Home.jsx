@@ -5,6 +5,11 @@ import Time from '../Time';
 
 const Home = () => {
   const HomeWrap =  styled.div`
+
+  p {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.3em;
+  }
   `;
 
   return (

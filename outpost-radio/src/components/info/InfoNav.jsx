@@ -24,6 +24,8 @@ const InfoNav = () => {
       line-height: 100%;
       padding: .25rem .5rem;
       text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1em;
 
       &.active, &:hover {
         background-color: ${color.whitish};
@@ -32,14 +34,14 @@ const InfoNav = () => {
     }
 
     @media (min-width: ${screen.md}px) {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
     }
   `;
     
   return (
     <InfoNav>
       <NavLink to='/' exact activeClassName="active">home</NavLink>
-      <NavLink to='/comm-links' activeClassName="active">comm-links</NavLink>
+      <NavLink to='/comm-links' activeClassName="active">comms</NavLink>
       <NavLink to='/team' activeClassName="active">team</NavLink>
       <NavLink to='/contact' activeClassName="active">support</NavLink>
     </InfoNav>

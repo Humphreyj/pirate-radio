@@ -10,6 +10,7 @@ import {
 const CommsWrap = styled.div`
   overflow-y: scroll;
   width: 100%;
+  
 
   a {
     color: ${color.whitish};
@@ -19,6 +20,7 @@ const CommsWrap = styled.div`
 
   h5 {
     width: 100%;
+    font-family: 'Press Start 2P', cursive;
   }
 
   @media (min-width: ${screen.md}px) {
