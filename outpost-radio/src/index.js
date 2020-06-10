@@ -4,6 +4,7 @@ import { createStore } from 'redux';
 
 import * as serviceWorker from './serviceWorker';
 import './index.css';
+import './fonts/topaz.ttf'
 
 import app from './reducers/reducers';
 import Root from './components/Root';

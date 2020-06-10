@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import { screen } from '../../util';
 
 const teamTitles = {
-  'Alibyte': 'Station Director',
+  'alibyte': 'Station Head',
   'BloodEagle': 'Executive Producer',
   '': '',
 };
 
 const team = {
   admin: [
-    'Alibyte', 
+    'alibyte', 
     'BloodEagle', 
   ],
   artist: [
@@ -25,6 +25,8 @@ const team = {
     'Locke',
   ],
   musician: [
+	'Lemado',
+	'SpecialK'
 
   ],
   writers: [
@@ -49,7 +51,7 @@ const Team = () => {
 
     width: 100%;
 <<<<<<< HEAD
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Topaz', monospace;
 =======
     padding-right: 30%;
     scrollbar-width: none;

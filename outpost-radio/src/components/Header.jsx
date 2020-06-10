@@ -16,11 +16,11 @@ const Header = () => {
     color: ${color.lightBlackish};
     margin-top: .5rem;
     text-align: center;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Topaz', monospace;
   `;
   return (
     <TrialWrap className="body-width">
-      <Trial>starSTRM v1.9.4a /unlicensed copy*/</Trial>
+      <Trial>starSTRM v1.9.4a /*unlicensed copy*/</Trial>
     </TrialWrap>
   );
 };

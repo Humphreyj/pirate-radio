@@ -10,9 +10,9 @@ const Support = () => {
     overflow-y: scroll;
     width: 100%;
 <<<<<<< HEAD
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Topaz', cursive;
     h4 {
-      font-family: 'Press Start 2P', cursive;
+      font-family: 'Topaz', cursive;
     }
 =======
 
@@ -37,7 +37,7 @@ const Support = () => {
   return (
     <SupportWrap>
       <h4>Your Support Makes a Difference.</h4>
-      <p>Thanks for supporting Outpost Radio, The Voice of the High Frontier. When you give to Outpost Radio, you make the local, regional and international independent journalism and music that you can only get from pirate radio possible.</p>
+      <p>Supporting Outpost Radio supports pilots everywhere. Every UEC donated goes to server costs, ship giveaways, and back to the community. Outpost is strictly not for profit. We are the radio of the people, and we will keep it that way.</p>
       {/* <a href="#"><i className="fab fa-patreon fa-3x"></i></a> */}
       <span><i className="fab fa-patreon fa-3x"></i></span>
     </SupportWrap>

@@ -24,7 +24,7 @@ const InfoNav = () => {
       line-height: 100%;
       padding: .25rem .5rem;
       text-decoration: none;
-      font-family: 'Press Start 2P', cursive;
+      font-family: 'Topaz', cursive;
       font-size: 1em;
 
       &.active, &:hover {

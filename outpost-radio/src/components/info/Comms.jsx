@@ -20,7 +20,7 @@ const CommsWrap = styled.div`
 
   h5 {
     width: 100%;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Topaz', monospace;
   }
 
   @media (min-width: ${screen.md}px) {
@@ -34,7 +34,11 @@ const CommsWrap = styled.div`
 const Comms = () => {
   return (
     <CommsWrap>
-      <h5>Stay Tuned for updates!</h5>
+      <h5>Changelog: 6-10-2950 <br></br>
+	  * Changed fonts <br></br>
+	  * Added info text<br></br>
+	  * Minor fixes<br></br>
+	  * Changed logo </h5>
     </CommsWrap>
   );
 };
