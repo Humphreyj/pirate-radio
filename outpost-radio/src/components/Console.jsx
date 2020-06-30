@@ -47,7 +47,7 @@ const Console = () => {
 
 
 
-  const showMsg = () => 'Thank you for listening to Outpost radio!';
+  const showMsg = () => 'Thank you for listening to Outpost Radio!';
 
   const bastards = () => {
     window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
@@ -61,7 +61,7 @@ const Console = () => {
         backgroundColor='black'
         barColor='black'
         className='term'
-        color='red'
+        color='green'
         commands={{
           show_msg: showMsg,
           'SPCBST': () => bastards() ,
@@ -75,7 +75,7 @@ const Console = () => {
         
         }}
         hideTopBar={true}
-        msg='Get Started... type help for help'
+        msg='starSTRM console v1.9.4.a'
         startState='maximised'
         style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight, width: '100%' }}
       />

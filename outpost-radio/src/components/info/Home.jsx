@@ -7,7 +7,7 @@ const Home = () => {
   const HomeWrap =  styled.div`
 
   p {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Topaz', monospace;
     line-height: 1.3em;
   }
   `;
@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <HomeWrap>
       <Time />
-      <p>Space is Lonely, but you don't have to be. Outpost Radio will be here 24/7 as you make your way through the vast universe. From Stanton to Terra, we'll be here. Outpost Radio, the Voice of the High Frontier.</p>
+      <p>Outpost Radio, voice of the high frontier. We work hard every day to get you the music and news you need out in the black. <br></br><br></br> Fly safe.</p>
     </HomeWrap>
   );
 }
