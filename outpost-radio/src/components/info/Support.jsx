@@ -9,22 +9,20 @@ const Support = () => {
   const SupportWrap = styled.div`
     overflow-y: scroll;
     width: 100%;
-<<<<<<< HEAD
     font-family: 'Topaz', cursive;
-    h4 {
-      font-family: 'Topaz', cursive;
-    }
-=======
-
-
->>>>>>> e99b874f5ba86f89f35671a9c96d04f51c0e9caf
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     a {
       text-decoration: none;
       color: ${color.whitish};
       padding-top: 1rem;
     }
 
-    span { cursor: pointer; }
+    span { 
+
+      cursor: pointer;
+     }
 
     @media (min-width: ${screen.md}px) {
         width: 100%;

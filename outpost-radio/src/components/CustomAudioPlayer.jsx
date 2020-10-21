@@ -4,10 +4,10 @@ const CustomAudioPlayer = (props) => {
     return (
         <audio 
       controls
-      autoPlay 
       id='player' 
-      src= {props.sample} >
+      src= "https://sync.outpost.radio/radio/8000/radio.mp3?1603314020" >
       </audio>
+      // <iframe src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020" frameborder="0"></iframe>
     );
 }
 

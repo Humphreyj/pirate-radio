@@ -1,8 +1,9 @@
-import React from 'react';
+import React,{useState,useEffect,createRef,useRef} from 'react';
 import styled from 'styled-components';
 import Feed from './Feed';
 import CustomAudioPlayer from './CustomAudioPlayer';
 import AudioSpectrum from 'react-audio-spectrum';
+import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import { 
   color,
@@ -58,6 +59,7 @@ const Player = () => {
     align-items: center;
     justify-content: space-between;
     padding:  0 1rem;
+    
 
     img {
       width: 80%;
@@ -67,7 +69,7 @@ const Player = () => {
       }
     }
   `;
-
+const [musicPlaying,setPlaying] = useState(false)
  let screenWidth = window.screen.width;
  let playerWidth = 200
  if (screenWidth < 766) {
@@ -76,24 +78,48 @@ const Player = () => {
    playerWidth = 550
  }
  console.log(screenWidth)
+ let player = createRef()
+ 
+ player = useRef(player)
+ console.log(player)
+let current_audio = ''
+ useEffect(() => {
+   if(player.current.audio.current !== null) {
+     
+      current_audio = player.current.audio.current
+      console.log(current_audio)
+   }
+
+ }, [])
+ 
+ 
+ 
+ 
   
 
   
-
+  
   return (
     <PlayerWrap>
       <Banner>
         <img src={bannerLogo} alt="outpost radio logo" />
       </Banner>
-      <CustomAudioPlayer
-        sample={sample} 
-      />
+      <AudioPlayer
+      src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"
+      ref={player}
+      className="player"
+      customAdditionalControls= {[]}
+      onPlay={e => setPlaying(true)}
+      // other props here
+    />
+    {/* <iframe src="https://sync.outpost.radio/public/comms/embed" frameborder="0" id='playerFrame' ref={player} allowtransparency="true" style={{width: "100%", minHeight: "150px", border: 0}}></iframe> */}
+   
       
-      <AudioSpectrum
+      {musicPlaying? <AudioSpectrum
           id="audio-canvas"
           height={200}
           width={playerWidth}
-          audioId={'player'}
+          audioEle={current_audio}
           capColor={'red'}
           capHeight={2}
           meterWidth={6}
@@ -104,7 +130,7 @@ const Player = () => {
             {stop: 1, color: 'red'}
           ]}
           gap={4}
-        />
+        /> : <div></div>}
       <Feed />
     </PlayerWrap>
   );
