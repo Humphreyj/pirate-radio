@@ -19,7 +19,7 @@ const Time = () => {
       let today = new Date();
       let year = today.getFullYear() + 930;
       let month = today.getMonth();
-      let day = today.getUTCDate() -1;
+      let day = today.getDate();
       let hour = today.getHours();
       let minutes = today.getMinutes();
       let seconds = today.getSeconds();

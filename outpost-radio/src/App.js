@@ -22,9 +22,7 @@ function App() {
     grid-area: body;
     grid-auto-flow: column;
     grid-gap: calc(1rem - 1px);
-    justify-content: center;
     margin: 0 auto;
-
     @media (max-width: ${screen.lg - 1}px) {
       grid-template-areas: 
         "player"
@@ -52,6 +50,7 @@ function App() {
     border-left: 2px dashed ${color.whitish};
     grid-area: border;
     width: 2px;
+    height: 100%;
   `;
 
   return (

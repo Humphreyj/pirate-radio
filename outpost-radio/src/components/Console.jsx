@@ -23,8 +23,8 @@ const InputWrap = styled.div`
 
   @media (min-width: ${screen.md}px) {
     // height: 15rem;
-    margin-bottom: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
   }
 `;
 

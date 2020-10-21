@@ -10,13 +10,13 @@ import {
 
 const InfoNav = () => {
   const InfoNav = styled.nav`
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
     border: 2px solid ${color.whitish};
-    display: grid;
-    grid-auto-flow: column;
-    grid-area: nav;
-    grid-gap: 1rem;
-    justify-content: start;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Topaz', monospace;
     
     a {
       color: white;
@@ -35,6 +35,7 @@ const InfoNav = () => {
 
     @media (min-width: ${screen.md}px) {
       font-size: 1.1rem;
+      width: 80%;
     }
   `;
     

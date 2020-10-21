@@ -1,10 +1,22 @@
+
 .App {
-  width: 95%;
-  margin: 20px auto;
-  padding: .5rem 0 1rem;
+  width: 60%;
+  margin: 8% auto;
+  padding: 1rem 1rem;
+  overflow-y: none;
+  border: 2px dashed white;
+  height: 100%;
+  font-family: 'Topaz', monospace;
   
-  border: 1px dashed white;
 }
+@media(max-width: 1500px) {
+  .App {
+    width: 95%;
+    
+  }
+}
+
+
 
 body { background-color: #111111; }
 body, * { box-sizing: border-box; }
