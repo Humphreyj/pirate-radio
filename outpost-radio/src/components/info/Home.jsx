@@ -9,6 +9,7 @@ const Home = () => {
   p {
     font-family: 'Topaz', monospace;
     line-height: 1.3em;
+    font-size: 1.5em;
   }
   `;
 
