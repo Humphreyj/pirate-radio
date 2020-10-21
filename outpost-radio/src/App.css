@@ -1,7 +1,7 @@
 
 .App {
   width: 60%;
-  margin: 8% auto;
+  margin: 4% auto 0% auto;
   padding: 1rem 1rem;
   overflow-y: none;
   border: 2px dashed white;
@@ -12,8 +12,11 @@
 @media(max-width: 1500px) {
   .App {
     width: 95%;
+    margin: 10px auto;
     
   }
+
+  
 }
 
 

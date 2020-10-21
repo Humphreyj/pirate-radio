@@ -4,8 +4,9 @@ const CustomAudioPlayer = (props) => {
     return (
         <audio 
       controls
-      autoPlay id='player' 
-      src={props.sample}>
+      autoPlay 
+      id='player' 
+      src= {props.sample} >
       </audio>
     );
 }

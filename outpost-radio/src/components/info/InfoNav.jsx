@@ -14,7 +14,7 @@ const InfoNav = () => {
     justify-content: space-evenly;
     align-items: center;
     border: 2px solid ${color.whitish};
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     font-family: 'Topaz', monospace;
     

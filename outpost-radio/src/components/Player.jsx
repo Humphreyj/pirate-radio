@@ -9,7 +9,7 @@ import {
   screen, 
 } from '../util';
 import bannerLogo from '../img/outpost-banner.png';
-import sample from '../audio/Session4part1.mp3'
+import sample from '../audio/sample.mp3'
 
 const Player = () => {
   const PlayerWrap = styled.div`
@@ -20,6 +20,11 @@ const Player = () => {
     height: 100%;
     margin: 0 auto;
     width: 100%;
+    border-right: 2px dashed ${color.whitish};
+    padding: 5%;
+    @media (max-width: ${screen.lg - 1}px) {
+      border-right: none;
+    }
 
     h3 {
       color: white;
