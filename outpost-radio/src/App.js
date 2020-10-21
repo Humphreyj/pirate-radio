@@ -6,7 +6,7 @@ import Player from './components/Player';
 import './App.css';
 import './sass/global.scss'
 import { 
-  color, 
+   
   screen, 
 } from './util';
 import borderImg from './img/border.svg';
