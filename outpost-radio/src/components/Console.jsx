@@ -7,8 +7,9 @@ import {
   screen, 
 } from '../util';
 
-const terminalHeight = '13rem';
+const terminalHeight = '15rem';
 const InputWrap = styled.div`
+
   grid-area: console;
   max-height: ${terminalHeight};
   margin: 0 auto 2rem;
@@ -23,17 +24,12 @@ const InputWrap = styled.div`
 
   @media (min-width: ${screen.md}px) {
     // height: 15rem;
-    margin-bottom: 0;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
   }
 `;
 
-// const Input = styled.input`
-//   color: ${color.whitish};
-//   background-color: #111;
-//   margin: 0 auto;
-//   width: 99%;
-// `;
+
 
 const Console = () => {
 
@@ -72,8 +68,8 @@ const Console = () => {
         }}
         hideTopBar={true}
         msg='starSTRM console v1.9.4.a'
-        startState='open'
-        style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight,margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',maxWidth:"100%",overflowX:"hidden" }}
+        startState='maximised'
+        style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight,margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',width:"100%",overflowX:"hidden" }}
       />
     </InputWrap>
   );

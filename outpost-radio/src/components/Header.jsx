@@ -11,6 +11,7 @@ const Header = () => {
     grid-area: header;
     justify-content: end;
     width: 100%;
+    border-bottom: 2px dashed white;
   `;
   const Trial = styled.p`
     color: ${color.lightBlackish};

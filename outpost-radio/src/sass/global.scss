@@ -1,1 +1,7 @@
+@font-face {
+    font-family: 'Topaz';
+    src: local('Topaz'), url(../fonts/topaz.ttf) format('tff');
+  }
+
 @import './overlay/overlay.scss';
+@import './customAudio.scss';

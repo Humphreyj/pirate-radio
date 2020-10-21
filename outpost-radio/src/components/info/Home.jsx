@@ -10,6 +10,9 @@ const Home = () => {
     font-family: 'Topaz', monospace;
     line-height: 1.3em;
     font-size: 1.5em;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
   }
   `;
 

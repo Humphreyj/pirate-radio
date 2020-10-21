@@ -12,16 +12,12 @@ import {
 const InfoPanel = () => {
 
   const InfoPanel = styled.div`
-    display: grid;
-    grid-area: infopanel;
-    grid-template-areas: 
-      "nav"
-      "info"
-      "console";
-    grid-template-columns: 100%;
-    grid-template-rows: 2rem minmax(10rem, 1fr) 13rem;
-    justify-content: space-between;
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+    min-height: 60em;
   `;
 
     
