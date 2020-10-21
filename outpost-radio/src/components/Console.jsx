@@ -12,7 +12,7 @@ const InputWrap = styled.div`
 
   grid-area: console;
   max-height: ${terminalHeight};
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   width: 100%;
   overflow-y: hidden;
   overflow-x: hidden

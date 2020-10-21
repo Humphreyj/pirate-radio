@@ -7,6 +7,7 @@ const color = {
 
 const screen = {
   xs: '320',
+  sm: '500',
   md: '768',
   lg: '960',
   xl: '1200',
