@@ -4,6 +4,7 @@ import Header from './components/Header';
 import InfoPanel from './components/InfoPanel';
 import Player from './components/Player';
 import './App.css';
+import './sass/global.scss'
 import { 
   color, 
   screen, 
@@ -55,6 +56,8 @@ function App() {
 
   return (
     <Router>
+      <div className='overlay'></div>
+      <div className='scanline'></div>
         <div className="App">
         <Header className="body-width" />
         <Container className="body-width">
