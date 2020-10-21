@@ -25,18 +25,19 @@ const InfoNav = () => {
       padding: .25rem .5rem;
       text-decoration: none;
       font-family: 'Topaz', cursive;
-      font-size: 1em;
+      font-size: 2em;
 
       &.active, &:hover {
         background-color: ${color.whitish};
         color: ${color.blackish};
       }
+      @media (max-width: ${screen.sm}px) {
+        font-size: 1.1rem;
+        width: 80%;
+      }
     }
 
-    @media (min-width: ${screen.md}px) {
-      font-size: 1.1rem;
-      width: 80%;
-    }
+    
   `;
     
   return (

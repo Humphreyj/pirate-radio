@@ -63,12 +63,19 @@ const Player = () => {
       width: 80%;
       @media (max-width: ${screen.md}px) {
         margin: 0 auto;
-        width: 70%;
+        width: 100%;
       }
     }
   `;
 
- 
+ let screenWidth = window.screen.width;
+ let playerWidth = 200
+ if (screenWidth < 766) {
+   playerWidth = 275
+ }else {
+   playerWidth = 550
+ }
+ console.log(screenWidth)
   
 
   
@@ -85,7 +92,7 @@ const Player = () => {
       <AudioSpectrum
           id="audio-canvas"
           height={200}
-          width={550}
+          width={playerWidth}
           audioId={'player'}
           capColor={'red'}
           capHeight={2}
