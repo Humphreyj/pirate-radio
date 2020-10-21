@@ -68,7 +68,7 @@ const Player = () => {
     }
   `;
 
-  let track = 'Ultimate Space Jam'
+ 
   
 
   
