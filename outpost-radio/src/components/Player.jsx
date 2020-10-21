@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Feed from './Feed';
-import AudioPlayer from 'react-h5-audio-player';
+import CustomAudioPlayer from './CustomAudioPlayer';
+import AudioSpectrum from 'react-audio-spectrum';
 import 'react-h5-audio-player/lib/styles.css';
 import { 
   color,
@@ -25,7 +26,7 @@ const Player = () => {
       width: 20%;
     }
     
-    .rhap_container {
+    .audio {
       align-self: center;
       background-color: transparent;
       border: 0;
@@ -42,6 +43,8 @@ const Player = () => {
     @media (min-width: ${screen.md}px) {
       // height: 32rem;
     }
+
+    
   `;
 
   const Banner = styled.div`
@@ -61,6 +64,7 @@ const Player = () => {
   `;
 
   let track = 'Ultimate Space Jam'
+  
 
   
 
@@ -69,13 +73,26 @@ const Player = () => {
       <Banner>
         <img src={bannerLogo} alt="outpost radio logo" />
       </Banner>
-      <AudioPlayer
-      src={sample}
-      customAdditionalControls={[]}
-      header={`Now playing: ${track}`}
-    // other props here
-    // src="https://sync.outpost.radio/public/comms/embed"
-  />
+      <CustomAudioPlayer
+        sample={sample} 
+      />
+      
+      <AudioSpectrum
+          id="audio-canvas"
+          height={200}
+          width={550}
+          audioId={'player'}
+          capColor={'red'}
+          capHeight={2}
+          meterWidth={6}
+          meterCount={512}
+          meterColor={[
+            {stop: 0, color: '#f00'},
+            {stop: 0.5, color: '#0CD7FD'},
+            {stop: 1, color: 'red'}
+          ]}
+          gap={4}
+        />
       <Feed />
     </PlayerWrap>
   );
