@@ -12,16 +12,14 @@ const InputWrap = styled.div`
   grid-area: console;
   max-height: ${terminalHeight};
   margin: 0 auto 2rem;
-  overflow-y: hidden;
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden
 
   p {
     color: ${color.whitish};
   }
-
-  .term {
-    height: 2rem;
-  }
+  
 
   @media (min-width: ${screen.md}px) {
     // height: 15rem;
@@ -71,13 +69,11 @@ const Console = () => {
         }}
         descriptions={{
           get_station_info: 'Displays info about the station.',
-
-        
         }}
         hideTopBar={true}
         msg='starSTRM console v1.9.4.a'
-        startState='maximised'
-        style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight, width: '100%' }}
+        startState='open'
+        style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight,margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',maxWidth:"100%",overflowX:"hidden" }}
       />
     </InputWrap>
   );
