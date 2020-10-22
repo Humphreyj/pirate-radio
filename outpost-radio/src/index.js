@@ -1,18 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-
+import App from './App';
 import * as serviceWorker from './serviceWorker';
 import './index.css';
 import './fonts/topaz.ttf'
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 
-import app from './reducers/reducers';
+
 import Root from './components/Root';
 
-const store = createStore(app);
+
 
 ReactDOM.render(
-  <Root store={store} />, 
+  
+    <Provider store={store}><App /></Provider >,
   document.getElementById('root')
 );
 

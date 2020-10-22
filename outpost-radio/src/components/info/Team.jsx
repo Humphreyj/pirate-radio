@@ -47,17 +47,16 @@ const Team = () => {
   const TeamWrap =  styled.div`
     height: 16rem;
     overflow-y: scroll;
-    padding: 0 .5rem;
+    padding: 0 ;
 
     width: 100%;
-<<<<<<< HEAD
     font-family: 'Topaz', monospace;
-=======
-    padding-right: 30%;
     scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 
->>>>>>> e99b874f5ba86f89f35671a9c96d04f51c0e9caf
 
     ul {
       list-style: none;
@@ -79,10 +78,11 @@ const Team = () => {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        flex-wrap: wrap;
+        
 
         p {
-          margin: .5em 1em;
+          margin: .5em ;
+          width: 80%
         }
       }
     }
@@ -97,8 +97,11 @@ const Team = () => {
 
   return (
     <TeamWrap>
+      <div className="department admin">
       {team.admin.map(admin => 
         teamTitles[admin] ? <p>{teamTitles[admin]}: {admin}</p> : '')}
+      </div>
+      
       
       <div className="voice-actors department">
         <h4>Voice Actors</h4>

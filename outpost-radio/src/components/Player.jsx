@@ -1,17 +1,17 @@
-import React from 'react';
+import React,{useEffect,createRef,useRef} from 'react';
+import {connect} from "react-redux"
 import styled from 'styled-components';
 import Feed from './Feed';
-import CustomAudioPlayer from './CustomAudioPlayer';
-import AudioSpectrum from 'react-audio-spectrum';
-import 'react-h5-audio-player/lib/styles.css';
+
+import CustomAudioPayer from './CustomAudioPlayer';
 import { 
   color,
   screen, 
 } from '../util';
 import bannerLogo from '../img/outpost-banner.png';
-import sample from '../audio/sample.mp3'
 
-const Player = () => {
+
+const Player = (props) => {
   const PlayerWrap = styled.div`
     background-color: ${color.blackish};
     display: flex;
@@ -58,6 +58,7 @@ const Player = () => {
     align-items: center;
     justify-content: space-between;
     padding:  0 1rem;
+    
 
     img {
       width: 80%;
@@ -75,39 +76,38 @@ const Player = () => {
  }else {
    playerWidth = 550
  }
- console.log(screenWidth)
+ let player = createRef()
+ 
+ player = useRef(player)
+ 
+
+ 
+ 
+ 
+ 
+ 
   
 
   
-
+  
   return (
     <PlayerWrap>
       <Banner>
         <img src={bannerLogo} alt="outpost radio logo" />
       </Banner>
-      <CustomAudioPlayer
-        sample={sample} 
-      />
+      <CustomAudioPayer /> 
+    
+   
       
-      <AudioSpectrum
-          id="audio-canvas"
-          height={200}
-          width={playerWidth}
-          audioId={'player'}
-          capColor={'red'}
-          capHeight={2}
-          meterWidth={6}
-          meterCount={512}
-          meterColor={[
-            {stop: 0, color: '#f00'},
-            {stop: 0.5, color: '#0CD7FD'},
-            {stop: 1, color: 'red'}
-          ]}
-          gap={4}
-        />
+        
       <Feed />
     </PlayerWrap>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+      state: state.data
+  }
+}
 
-export default Player;
+export default connect(mapStateToProps)(Player);

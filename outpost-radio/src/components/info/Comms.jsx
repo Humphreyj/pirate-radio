@@ -17,11 +17,16 @@ const CommsWrap = styled.div`
     text-decoration: none;
     padding-top: 1rem;
   }
-
-  h5 {
-    width: 100%;
+  p{
     font-family: 'Topaz', monospace;
+    line-height: 1.3em;
+    font-size: 1.5em;
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
   }
+
+  
 
   @media (min-width: ${screen.md}px) {
     box-sizing: border-box;
@@ -34,11 +39,11 @@ const CommsWrap = styled.div`
 const Comms = () => {
   return (
     <CommsWrap>
-      <h5>Changelog: 6-10-2950 <br></br>
+      <p>Changelog: 6-10-2950 <br></br>
 	  * Changed fonts <br></br>
 	  * Added info text<br></br>
 	  * Minor fixes<br></br>
-	  * Changed logo </h5>
+	  * Changed logo </p>
     </CommsWrap>
   );
 };
