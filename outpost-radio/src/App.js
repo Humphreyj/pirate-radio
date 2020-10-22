@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import {useDispatch} from 'react-redux';
 import {getSongInfo} from './Redux/actions';
 import styled from 'styled-components';
@@ -16,8 +16,24 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
   const dispatch=useDispatch()
+  const[serverMessage, setServerMessage] = useState();
+  let ws = new WebSocket('ws:https://outpost-radio.netlify.app/ws')
   useEffect(() => {
     dispatch(getSongInfo())
+    ws.onopen = () => {
+      // on connecting, do nothing but log it to the console
+      console.log('connected')
+      }
+      ws.onmessage = evt => {
+      // listen to data sent from the websocket server
+      const message = JSON.parse(evt.data)
+      serverMessage({dataFromServer: message})
+      console.log(message)
+      }
+      ws.onclose = () => {
+      console.log('disconnected')
+      // automatically try to reconnect on connection loss
+      }
   },[])
 
   const Container = styled.div`
