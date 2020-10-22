@@ -1,18 +1,17 @@
-import React,{useState,useEffect,createRef,useRef} from 'react';
+import React,{useEffect,createRef,useRef} from 'react';
+import {connect} from "react-redux"
 import styled from 'styled-components';
 import Feed from './Feed';
-import CustomAudioPlayer from './CustomAudioPlayer';
-import AudioSpectrum from 'react-audio-spectrum';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+
+import CustomAudioPayer from './CustomAudioPlayer';
 import { 
   color,
   screen, 
 } from '../util';
 import bannerLogo from '../img/outpost-banner.png';
-import sample from '../audio/sample.mp3'
 
-const Player = () => {
+
+const Player = (props) => {
   const PlayerWrap = styled.div`
     background-color: ${color.blackish};
     display: flex;
@@ -69,7 +68,7 @@ const Player = () => {
       }
     }
   `;
-const [musicPlaying,setPlaying] = useState(false)
+
  let screenWidth = window.screen.width;
  let playerWidth = 200
  if (screenWidth < 766) {
@@ -77,20 +76,12 @@ const [musicPlaying,setPlaying] = useState(false)
  }else {
    playerWidth = 550
  }
- console.log(screenWidth)
  let player = createRef()
  
  player = useRef(player)
- console.log(player)
-let current_audio = ''
- useEffect(() => {
-   if(player.current.audio.current !== null) {
-     
-      current_audio = player.current.audio.current
-      console.log(current_audio)
-   }
+ 
 
- }, [])
+ 
  
  
  
@@ -104,36 +95,19 @@ let current_audio = ''
       <Banner>
         <img src={bannerLogo} alt="outpost radio logo" />
       </Banner>
-      <AudioPlayer
-      src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"
-      ref={player}
-      className="player"
-      customAdditionalControls= {[]}
-      onPlay={e => setPlaying(true)}
-      // other props here
-    />
-    {/* <iframe src="https://sync.outpost.radio/public/comms/embed" frameborder="0" id='playerFrame' ref={player} allowtransparency="true" style={{width: "100%", minHeight: "150px", border: 0}}></iframe> */}
+      <CustomAudioPayer /> 
+    
    
       
-      {musicPlaying? <AudioSpectrum
-          id="audio-canvas"
-          height={200}
-          width={playerWidth}
-          audioEle={current_audio}
-          capColor={'red'}
-          capHeight={2}
-          meterWidth={6}
-          meterCount={512}
-          meterColor={[
-            {stop: 0, color: '#f00'},
-            {stop: 0.5, color: '#0CD7FD'},
-            {stop: 1, color: 'red'}
-          ]}
-          gap={4}
-        /> : <div></div>}
+        
       <Feed />
     </PlayerWrap>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+      state: state.data
+  }
+}
 
-export default Player;
+export default connect(mapStateToProps)(Player);

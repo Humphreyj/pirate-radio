@@ -1,4 +1,6 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import {useDispatch} from 'react-redux';
+import {getSongInfo} from './Redux/actions';
 import styled from 'styled-components';
 import Header from './components/Header';
 import InfoPanel from './components/InfoPanel';
@@ -13,6 +15,10 @@ import borderImg from './img/border.svg';
 import {BrowserRouter as Router} from 'react-router-dom';
 
 function App() {
+  const dispatch=useDispatch()
+  useEffect(() => {
+    dispatch(getSongInfo())
+  },[])
 
   const Container = styled.div`
     border-image-source: url('https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png');
@@ -42,6 +48,7 @@ function App() {
     width: 2px;
     height: 100%;
   `;
+ 
 
   return (
     <Router>

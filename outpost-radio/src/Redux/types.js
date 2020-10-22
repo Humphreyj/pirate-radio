@@ -1,0 +1,1 @@
+export const GET_SONG_INFO = 'GET_SONG_INFO'
