@@ -1,3 +1,5 @@
+import React, { useState, useEffect, useRef } from 'react';
+
 /* Colors */
 const color = {
   blackish: '#111111',
@@ -16,4 +18,24 @@ const screen = {
 export {
   color,
   screen,
+}
+
+export const useInterval = (callback, delay) => {
+
+  const savedCallback = useRef();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      const id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
 }
