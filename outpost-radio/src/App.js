@@ -17,7 +17,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 function App() {
   const dispatch=useDispatch()
   const[serverMessage, setServerMessage] = useState();
-  let ws = new WebSocket('ws:https://outpost-radio.netlify.app/ws')
+  let ws = new WebSocket('wss:https://outpost-radio.netlify.app/wss')
   useEffect(() => {
     dispatch(getSongInfo())
    
