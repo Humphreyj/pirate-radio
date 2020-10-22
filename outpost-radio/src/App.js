@@ -20,6 +20,9 @@ function App() {
   let ws = new WebSocket('ws:https://outpost-radio.netlify.app/ws')
   useEffect(() => {
     dispatch(getSongInfo())
+   
+  },[dispatch])
+  useEffect(() => {
     ws.onopen = () => {
       // on connecting, do nothing but log it to the console
       console.log('connected')
@@ -27,13 +30,14 @@ function App() {
       ws.onmessage = evt => {
       // listen to data sent from the websocket server
       const message = JSON.parse(evt.data)
-      serverMessage({dataFromServer: message})
-      console.log(message)
+      setServerMessage({dataFromServer: message})
+      console.log(message,serverMessage)
       }
       ws.onclose = () => {
       console.log('disconnected')
       // automatically try to reconnect on connection loss
       }
+      // eslint-disable-next-line
   },[])
 
   const Container = styled.div`

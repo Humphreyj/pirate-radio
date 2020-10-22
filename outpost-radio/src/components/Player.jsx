@@ -1,4 +1,4 @@
-import React,{useEffect,createRef,useRef} from 'react';
+import React from 'react';
 import {connect} from "react-redux"
 import styled from 'styled-components';
 import Feed from './Feed';
@@ -69,16 +69,16 @@ const Player = (props) => {
     }
   `;
 
- let screenWidth = window.screen.width;
- let playerWidth = 200
- if (screenWidth < 766) {
-   playerWidth = 275
- }else {
-   playerWidth = 550
- }
- let player = createRef()
+//  let screenWidth = window.screen.width;
+//  let playerWidth = 200
+//  if (screenWidth < 766) {
+//    playerWidth = 275
+//  }else {
+//    playerWidth = 550
+//  }
+//  let player = createRef()
  
- player = useRef(player)
+//  player = useRef(player)
  
 
  

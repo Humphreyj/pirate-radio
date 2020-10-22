@@ -1,8 +1,8 @@
-import React,{useState,useEffect,useRef} from 'react';
-import {connect,useDispatch} from 'react-redux';
+import React,{useState,useEffect} from 'react';
+import {connect} from 'react-redux';
 import styled from 'styled-components';
 import AudioPlayer from 'react-h5-audio-player';
-import AudioSpectrum from 'react-audio-spectrum';
+// import AudioSpectrum from 'react-audio-spectrum';
 import 'react-h5-audio-player/lib/styles.css';
 
 import { 
@@ -11,14 +11,13 @@ import {
 } from '../util';
 
 const CustomAudioPlayer = (props) => {
-  const dispatch = useDispatch()
-  let screenWidth = window.screen.width;
-  let playerWidth = 200
-  if (screenWidth < 766) {
-    playerWidth = 275
-  }else {
-    playerWidth = 550
-  }
+  // let screenWidth = window.screen.width;
+  // let playerWidth = 200
+  // if (screenWidth < 766) {
+  //   playerWidth = 275
+  // }else {
+  //   playerWidth = 550
+  // }
   
   let station = props.state
   const [stream,setStream] = useState(false)
