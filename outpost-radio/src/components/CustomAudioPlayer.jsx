@@ -1,4 +1,4 @@
-import React,{useState,useEffect,createRef,useRef} from 'react';
+import React,{useState,useEffect,useRef} from 'react';
 import {connect,useDispatch} from 'react-redux';
 import {getSongInfo} from '../Redux/actions';
 import styled from 'styled-components';
@@ -39,14 +39,14 @@ const CustomAudioPlayer = (props) => {
     }else {
       setDelay(10000)
     }
-
+    console.log(currentAudio)
+    // eslint-disable-next-line
   },[station])
   
   useInterval(() => {
     dispatch(getSongInfo())
   }, delay || 15000);
 
-  let blank = new Audio()
   
     return (
       <>
@@ -68,7 +68,7 @@ const CustomAudioPlayer = (props) => {
           onPlay={() => setCurrentAudio(player.current.audio.current)}
           />
           <h4 className="listeners">Listening Now: {station.listeners.current} </h4>
-          <audio autoPlay id='hidden' volume={0} src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"></audio>
+          <audio autoPlay id='hidden' volume='0' src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"></audio>
            <AudioSpectrum
             id="audio-canvas"
             height={200}

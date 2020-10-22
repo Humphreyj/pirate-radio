@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+// eslint-disable-next-line
+import React, {useEffect, useRef } from 'react';
 
 /* Colors */
 const color = {
