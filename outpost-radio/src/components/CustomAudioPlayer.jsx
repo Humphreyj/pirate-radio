@@ -4,8 +4,6 @@ import {getSongInfo} from '../Redux/actions';
 import styled from 'styled-components';
 import AudioPlayer from 'react-h5-audio-player';
 import {useInterval} from '../util';
-
-import AudioSpectrum from 'react-audio-spectrum';
 import 'react-h5-audio-player/lib/styles.css';
 
 import { 
@@ -29,7 +27,6 @@ const CustomAudioPlayer = (props) => {
   player= useRef(player)
   const [stream,setStream] = useState(false)
   const [delay, setDelay] = useState(60000)
-  const [currentAudio, setCurrentAudio]=useState();
   useEffect(() => {
     if(station.listeners) {
       
@@ -39,13 +36,13 @@ const CustomAudioPlayer = (props) => {
     }else {
       setDelay(10000)
     }
-    console.log(currentAudio)
+    
     // eslint-disable-next-line
   },[station])
   
   useInterval(() => {
     dispatch(getSongInfo())
-  }, delay || 15000);
+  }, delay || 20000);
 
   
     return (
@@ -65,28 +62,8 @@ const CustomAudioPlayer = (props) => {
           volume={.6}
           ref={player}
           customAdditionalControls= {[]}
-          onPlay={() => setCurrentAudio(player.current.audio.current)}
           />
           <h4 className="listeners">Listening Now: {station.listeners.current} </h4>
-          <audio autoPlay id='hidden' volume='0' src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"></audio>
-           <AudioSpectrum
-            id="audio-canvas"
-            height={200}
-            width={200}
-            audioId={'hidden'}
-            capColor={'red'}
-            capHeight={2}
-            meterWidth={6}
-            meterCount={512}
-            meterColor={[
-              {stop: 0, color: '#f00'},
-              {stop: 0.5, color: '#0CD7FD'},
-              {stop: 1, color: 'red'}
-            ]}
-            gap={4}
-          />
-        
-        
         </CustomPlayer> : <h1 className="loading">Loading</h1>
         }
 
