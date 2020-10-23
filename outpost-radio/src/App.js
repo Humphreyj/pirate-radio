@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import InfoPanel from './components/InfoPanel';
 import Player from './components/Player';
-import { TerminalContextProvider } from "react-terminal";
 
 import './App.css';
 import './sass/global.scss'
@@ -55,7 +54,7 @@ function App() {
 
   return (
     <Router>
-      <TerminalContextProvider>
+      
         <div className='overlay'></div>
         <div className='scanline'></div>
           <div className="App">
@@ -65,7 +64,7 @@ function App() {
             <InfoPanel />
           </Container>
         </div>
-        </TerminalContextProvider>
+        
     </Router>
     
   );
