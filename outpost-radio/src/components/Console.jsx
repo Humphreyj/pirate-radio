@@ -49,10 +49,7 @@ const Console = () => {
     window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
     return 'The Space Bastards are a legitimate group of traders and salvagers.';
   };
-  const commands = {
-    whoami: "jackharper",
-    cd: (directory) => `changed path to ${directory}`
-  };
+  
 
   return (
     <InputWrap>
