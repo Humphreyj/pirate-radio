@@ -32,9 +32,7 @@ const CustomAudioPlayer = (props) => {
       
       setStream(true)
       setDelay(station.now_playing.remaining * 1000)
-      console.log(station.now_playing.remaining )
-    }else {
-      setDelay(10000)
+      console.log(station.now_playing.song )
     }
     
     // eslint-disable-next-line
@@ -51,8 +49,13 @@ const CustomAudioPlayer = (props) => {
           stream ? 
           <CustomPlayer className="custom-player">
             <div className="song-info">
+              <img src={station.now_playing.song.art} alt={`Album art for ${station.now_playing.song.album}`}/>
+              <div className="title-and-artist">
+                <p className="now-playing">Now Playing:</p>
                 <p className="song-title">{station.now_playing.song.title}</p>
                 <p className="song-artist">By: {station.now_playing.song.artist}</p>
+              </div>
+                
 
             </div>
           <AudioPlayer
@@ -60,11 +63,18 @@ const CustomAudioPlayer = (props) => {
           className="player"
           autoPlay
           volume={.6}
+          showSkipControls={false}
+          showJumpControls={false}
+          customProgressBarSection={
+            [
+              
+            ]
+          }
           ref={player}
           customAdditionalControls= {[]}
           />
           <h4 className="listeners">Listening Now: {station.listeners.current} </h4>
-        </CustomPlayer> : <h1 className="loading">Loading</h1>
+        </CustomPlayer> : <div className="player-loading"><h1 className="loading">Loading</h1></div> 
         }
 
         
@@ -83,11 +93,38 @@ const CustomPlayer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding:  0 1rem;
+    background-color: black;
     color: ${color.whitish};
-    width: 100%;
-
-    .rhap-container {
+    width: 80%;
+    @media (max-width: ${screen.md}px) {
+      
       width: 100%;
+    }
+
+    .song-info {
+      background-color: black;
+      width: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 50%;
+        margin-right: 15px;
+        border: 1px solid white;
+      }
+    }
+
+    .rhap_container {
+      width: 50%;
+      background-color: black;
+      color: ${color.whitish};
+      button {
+        margin-right: 40px;
+        width: 100%;
+      }
+      
+      
     }
     
 

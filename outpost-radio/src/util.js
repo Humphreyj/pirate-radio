@@ -14,6 +14,7 @@ const screen = {
   md: '768',
   lg: '960',
   xl: '1200',
+  xxl: '1400',
 };
 
 export {

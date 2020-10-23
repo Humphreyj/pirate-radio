@@ -6,7 +6,7 @@ import InfoNav from './info/InfoNav';
 import 'react-dropdown/style.css';
 import { 
   // color, 
-  // screen, 
+  screen, 
 } from '../util';
 
 const InfoPanel = () => {
@@ -15,9 +15,9 @@ const InfoPanel = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%;
     width: 100%;
-    min-height: 60em;
+    height: 95vh;
+    position: relative;
     
     p{
       font-family: 'Topaz', monospace;
@@ -26,6 +26,18 @@ const InfoPanel = () => {
       text-align: center;
       width: 80%;
       margin: 10px auto;
+    }
+    @media (max-width: ${screen.md}px) {
+      position: initial;
+      height: 100%;
+    }
+
+    @media (min-width: ${screen.xl}px) {
+      height: 93vh;
+      
+    }
+    @media (max-width: ${screen.md}px) {
+      height: 100%;
     }
   `;
 

@@ -21,7 +21,7 @@ const Player = (props) => {
     margin: 0 auto;
     width: 100%;
     border-right: 2px dashed ${color.whitish};
-    padding: 5%;
+    
     @media (max-width: ${screen.lg - 1}px) {
       border-right: none;
     }
@@ -31,14 +31,7 @@ const Player = (props) => {
       width: 20%;
     }
     
-    .audio {
-      align-self: center;
-      background-color: transparent;
-      border: 0;
-      height: 8.75rem;
-      margin: 0 auto;
-      padding: 1rem 0;
-      color: ${color.whitish};
+   
     
     
     @media (max-width: ${screen.md - 1}px) {
@@ -58,6 +51,7 @@ const Player = (props) => {
     align-items: center;
     justify-content: space-between;
     padding:  0 1rem;
+    width: 100%;
     
 
     img {

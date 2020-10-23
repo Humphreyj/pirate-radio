@@ -1,25 +1,13 @@
 
 .App {
-  width: 60%;
-  margin: 4% auto 0% auto;
-  padding: 1rem 1rem;
-  overflow-y: none;
   border: 2px dashed white;
-  height: 100%;
   font-family: 'Topaz', monospace;
   
 }
-@media(max-width: 1500px) {
-  .App {
-    width: 95%;
-    margin: 10px auto;
-    
-  }
-
-  
-}
 
 
 
-body { background-color: #111111; }
+
+body { background-color: #111111;
+        padding: 5px; }
 body, * { box-sizing: border-box; }
