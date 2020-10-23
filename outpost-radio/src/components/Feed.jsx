@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '../util';
+import { color,screen } from '../util';
 
 const Feed = () => {
   const FeedWrap = styled.div`
     display: flex;
     width: 100%;
+    margin-top: 60px;
     flex-direction: column;
     align-items:center;
     background-color: ${color.lightBlackish};
@@ -19,6 +20,11 @@ const Feed = () => {
       @media(max-width: 1200px) {
         font-size: 1em;
       }
+    }
+
+    @media (max-width: ${screen.md}px) {
+      margin: 20px auto;
+      width: 100%;
     }
   `;
 

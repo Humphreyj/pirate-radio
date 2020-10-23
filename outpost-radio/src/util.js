@@ -5,6 +5,7 @@ import React, {useEffect, useRef } from 'react';
 const color = {
   blackish: '#111111',
   lightBlackish: '#333333',
+  blackOpaque: 'rgba(51, 51, 51, 0.6)',
   whitish: '#e6e6e6',
 };
 
