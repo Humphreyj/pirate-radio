@@ -17,7 +17,6 @@ const InfoRoutes = () => {
     color: ${color.whitish};
     grid-area: info;
     padding: 0 .5rem;
-    margin-bottom: 100px;
   `;
 
   return (

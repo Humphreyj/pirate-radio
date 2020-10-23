@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Header from './components/Header';
 import InfoPanel from './components/InfoPanel';
 import Player from './components/Player';
+import { TerminalContextProvider } from "react-terminal";
 
 import './App.css';
 import './sass/global.scss'
@@ -18,6 +19,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 function App() {
   const dispatch=useDispatch()
   useEffect(() => {
+    window.scrollTo(0,0)
     dispatch(getSongInfo())
    
   },[dispatch])
@@ -31,41 +33,39 @@ function App() {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
+    height: 95vh;
+    overflow-y: hidden;
     @media (max-width: ${screen.lg - 1}px) {
       flex-direction: column;
       align-items: center;
       width: 100%;
     }
 
-    @media (min-width: ${screen.lg}px) {
-      
-    }
-
-    @media (min-width: ${screen.xl}px) {
-      
-    }
-  `;
-
-  const Border = styled.div`
     
 
-    width: 2px;
-    height: 100%;
+    @media (min-width: ${screen.xl}px) {
+      height: 93vh;
+      
+    }
+    @media (max-width: ${screen.md}px) {
+      height: 100%;
+    }
   `;
  
 
   return (
     <Router>
-      <div className='overlay'></div>
-      <div className='scanline'></div>
-        <div className="App">
-        <Header className="body-width" />
-        <Container className="body-width">
-          <Player />
-          <Border />
-          <InfoPanel />
-        </Container>
-      </div>
+      <TerminalContextProvider>
+        <div className='overlay'></div>
+        <div className='scanline'></div>
+          <div className="App">
+          <Header className="body-width" />
+          <Container className="body-width">
+            <Player />
+            <InfoPanel />
+          </Container>
+        </div>
+        </TerminalContextProvider>
     </Router>
     
   );

@@ -45,11 +45,15 @@ const team = {
 
 const Team = () => {
   const TeamWrap =  styled.div`
-    height: 16rem;
-    overflow-y: scroll;
-    padding: 0 ;
+  ::-webkit-scrollbar {
+    width: 1px;
+  }
+    
+    padding-bottom: 20px;
 
     width: 100%;
+    height: 30em;
+    overflow-y: scroll;
     font-family: 'Topaz', monospace;
     scrollbar-width: none;
     display: flex;
@@ -66,11 +70,17 @@ const Team = () => {
       }
     }
     .department {
-      width: 100%;
-      h4 {
-        text-decoration: underline;
-        font-family: inherit;
+      width: 80%;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+      .department-title {
+        font-size: 2em;
         text-align: center;
+        @media (max-width: ${screen.sm}px) {
+          width: 100%;
+    
+        }
       }
       
       div{
@@ -78,18 +88,30 @@ const Team = () => {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        flex-wrap: wrap;
         
 
-        p {
+        .team-member {
           margin: .5em ;
-          width: 80%
+          width: 25%
+          font-size: 1.7em;
+          @media (max-width: ${screen.sm}px) {
+            fonst-size: 1.4em;
+            margin: 10px 0;
+            width: 50%;
+      
+          }
         }
       }
     }
 
-    @media (min-width: ${screen.md}px) {
+    @media (max-width: ${screen.md}px) {
       width: 100%;
-      // margin: 0 auto;
+      height: 30em;
+
+    }
+    @media (min-width: ${screen.lg + 10}px) {
+      height: 50em;
 
     }
   `;
@@ -104,22 +126,22 @@ const Team = () => {
       
       
       <div className="voice-actors department">
-        <h4>Voice Actors</h4>
+        <h4 className='department-title'>Voice Actors</h4>
         <div>
-        {team.voice.map(voice => <p>{voice}</p>)}
+        {team.voice.map(voice => <p className='team-member'>{voice}</p>)}
         </div>
       </div>
 
       <div className="writers department">
-        <h4>Writers</h4>
+        <h4 className='department-title'>Writers</h4>
         <div>
-          {team.writers.map(writer => <p>{writer}</p> )}
+          {team.writers.map(writer => <p className='team-member'>{writer}</p> )}
         </div>
       </div>
       <div className="devs department">
-        <h4>Developers</h4>
+        <h4 className='department-title'>Developers</h4>
         <div>
-          {team.devs.map(dev => <p>{dev}</p> )}
+          {team.devs.map(dev => <p className='team-member'>{dev}</p> )}
         </div>
       </div>
       

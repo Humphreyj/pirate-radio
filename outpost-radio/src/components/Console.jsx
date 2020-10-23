@@ -2,30 +2,32 @@
 import React from 'react';
 import styled from 'styled-components';
 import Terminal from 'terminal-in-react';
+
 import { 
   color, 
   screen, 
 } from '../util';
 
-const terminalHeight = '15rem';
-const InputWrap = styled.div`
 
-  grid-area: console;
-  max-height: ${terminalHeight};
+const InputWrap = styled.div`
+  border-top: 2px solid white;
+  position: absolute;
+  top: 70%;
   margin: 0 auto;
   width: 100%;
   overflow-y: hidden;
-  overflow-x: hidden
+  overflow-x: hidden;
 
   p {
     color: ${color.whitish};
   }
   
 
-  @media (min-width: ${screen.md}px) {
-    // height: 15rem;
+  @media (max-width: ${screen.md}px) {
     margin: 0 auto;
     width: 80%;
+    position: static;
+    
   }
 `;
 
@@ -47,6 +49,7 @@ const Console = () => {
     window.open('https://robertsspaceindustries.com/orgs/SPCBSTRDS','_blank');
     return 'The Space Bastards are a legitimate group of traders and salvagers.';
   };
+  
 
   return (
     <InputWrap>
@@ -69,8 +72,9 @@ const Console = () => {
         hideTopBar={true}
         msg='starSTRM console v1.9.4.a'
         startState='maximised'
-        style={{ fontWeight: "bold", fontSize: "1rem", height: terminalHeight,margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',width:"100%",overflowX:"hidden" }}
+        style={{ fontWeight: "bold", fontSize: "1rem", height: "20em",margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',width:"100%",overflowX:"hidden" }}
       />
+    
     </InputWrap>
   );
 
