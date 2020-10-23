@@ -55,10 +55,14 @@ const Player = (props) => {
     
 
     img {
-      width: 80%;
+      width: 50%;
       @media (max-width: ${screen.md}px) {
         margin: 0 auto;
-        width: 100%;
+        width: 70%;
+      }
+      @media (min-width: ${screen.xxl}px) {
+        margin: 0 auto;
+        width: 50%;
       }
     }
   `;

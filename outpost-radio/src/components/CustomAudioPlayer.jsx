@@ -29,10 +29,8 @@ const CustomAudioPlayer = (props) => {
   const [delay, setDelay] = useState(60000)
   useEffect(() => {
     if(station.listeners) {
-      
       setStream(true)
       setDelay(station.now_playing.remaining * 1000)
-      console.log(station.now_playing.song )
     }
     
     // eslint-disable-next-line
@@ -40,7 +38,7 @@ const CustomAudioPlayer = (props) => {
   
   useInterval(() => {
     dispatch(getSongInfo())
-  }, delay || 20000);
+  }, delay || 35000);
 
   
     return (
@@ -54,6 +52,7 @@ const CustomAudioPlayer = (props) => {
                 <p className="now-playing">Now Playing:</p>
                 <p className="song-title">{station.now_playing.song.title}</p>
                 <p className="song-artist">By: {station.now_playing.song.artist}</p>
+                <p className="listeners">Listeners: {station.listeners.current} </p>
               </div>
                 
 
@@ -73,7 +72,7 @@ const CustomAudioPlayer = (props) => {
           ref={player}
           customAdditionalControls= {[]}
           />
-          <h4 className="listeners">Listening Now: {station.listeners.current} </h4>
+          
         </CustomPlayer> : <div className="player-loading"><h1 className="loading">Loading</h1></div> 
         }
 
@@ -95,7 +94,9 @@ const CustomPlayer = styled.div`
     padding:  0 1rem;
     background-color: black;
     color: ${color.whitish};
-    width: 80%;
+    width: 100%;
+    border-top: 2px dashed white;
+    border-bottom: 2px dashed white;
     @media (max-width: ${screen.md}px) {
       
       width: 100%;
@@ -103,16 +104,27 @@ const CustomPlayer = styled.div`
 
     .song-info {
       background-color: black;
-      width: 50%;
+      width: 55%;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
+      p {
+        margin: 20px 0;
+        font-size: 1.4em;
+        @media (max-width: ${screen.sm}px) {
+          font-size: 1em;
+        }
+      }
       img {
         width: 50%;
         margin-right: 15px;
-        border: 1px solid white;
+        @media (max-width: ${screen.md}px) {
+          margin-right: 15px;
+          width: 50%;
+        }
       }
+      
     }
 
     .rhap_container {
@@ -121,20 +133,14 @@ const CustomPlayer = styled.div`
       color: ${color.whitish};
       button {
         margin-right: 40px;
-        width: 100%;
+        
       }
       
       
     }
     
 
-    img {
-      width: 80%;
-      @media (max-width: ${screen.md}px) {
-        margin: 0 auto;
-        width: 100%;
-      }
-    }
+    
   `;
 
 export default connect(mapStateToProps)(CustomAudioPlayer);

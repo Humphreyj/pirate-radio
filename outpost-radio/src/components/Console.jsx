@@ -10,7 +10,7 @@ import {
 
 
 const InputWrap = styled.div`
-  border-top: 2px solid white;
+  border-top: 2px dashed white;
   position: absolute;
   top: 70%;
   margin: 0 auto;
@@ -72,7 +72,7 @@ const Console = () => {
         hideTopBar={true}
         msg='starSTRM console v1.9.4.a'
         startState='maximised'
-        style={{ fontWeight: "bold", fontSize: "1rem", height: "20em",margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',width:"100%",overflowX:"hidden" }}
+        style={{ fontWeight: "bold", fontSize: "1rem", height: "25em",margin:'0 auto',fontFamily:'Topaz',pointerEvents:'auto',width:"100%",overflowX:"hidden" }}
       />
     
     </InputWrap>
