@@ -52,7 +52,6 @@ const CustomAudioPlayer = (props) => {
   useInterval(() => {
     dispatch(getSongInfo())
   }, delay || 30000);
-
   
     return (
       <>
@@ -67,9 +66,8 @@ const CustomAudioPlayer = (props) => {
                 <p className="song-artist">By: {station.now_playing.song.artist}</p>
                 <p className="listeners">Listeners: {station.listeners.current} </p>
               </div>
-                
-
             </div>
+
           <AudioPlayer
           src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"
           className="player"
@@ -78,9 +76,7 @@ const CustomAudioPlayer = (props) => {
           showSkipControls={false}
           showJumpControls={false}
           customProgressBarSection={
-            [
-              
-            ]
+            []
           }
           ref={player}
           customAdditionalControls= {[]}

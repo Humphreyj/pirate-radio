@@ -13,14 +13,18 @@ const Support = () => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 30em;
+    h4 {
+      font-size: 2em;
+    }
     a {
       text-decoration: none;
       color: ${color.whitish};
-      padding-top: 1rem;
+      margin-top: 2rem;
     }
 
     span { 
-
+      margin-top: 2rem;
       cursor: pointer;
      }
 
