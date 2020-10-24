@@ -27,10 +27,23 @@ const CustomAudioPlayer = (props) => {
   player= useRef(player)
   const [stream,setStream] = useState(false)
   const [delay, setDelay] = useState(60000)
+  const [volume, setVolume] = useState(.05)
+
+  
+  
+  const change_volume = (e) => {
+      setVolume(e.target.volume)
+      localStorage.setItem('volume', volume)
+  }
+  
   useEffect(() => {
     if(station.listeners) {
       setStream(true)
       setDelay(station.now_playing.remaining * 1000)
+    }
+    let saved_volume = localStorage.getItem('volume')
+    if(saved_volume) {
+      setVolume(saved_volume)
     }
     
     // eslint-disable-next-line
@@ -38,7 +51,7 @@ const CustomAudioPlayer = (props) => {
   
   useInterval(() => {
     dispatch(getSongInfo())
-  }, delay || 35000);
+  }, delay || 30000);
 
   
     return (
@@ -61,7 +74,7 @@ const CustomAudioPlayer = (props) => {
           src="https://sync.outpost.radio/radio/8000/radio.mp3?1603314020"
           className="player"
           autoPlay
-          volume={.6}
+          volume={volume}
           showSkipControls={false}
           showJumpControls={false}
           customProgressBarSection={
@@ -71,6 +84,7 @@ const CustomAudioPlayer = (props) => {
           }
           ref={player}
           customAdditionalControls= {[]}
+          onVolumeChange={change_volume}
           />
           
         </CustomPlayer> : <div className="player-loading"><h1 className="loading">Loading</h1></div> 
