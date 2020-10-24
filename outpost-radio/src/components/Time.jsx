@@ -68,6 +68,7 @@ const Time = () => {
     display: flex;
     justify-content: space-evenly;
     width: 20%;
+    font-size: 1.3em;
   `;
   const CurrentTime = styled.div`
     display: flex;
@@ -76,6 +77,7 @@ const Time = () => {
   `;
   const Greeting = styled.p`
     letter-spacing: .1rem;
+    font-size: 1.2em;
   `;
 
   const addZero = (num) => {

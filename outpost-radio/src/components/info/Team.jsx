@@ -110,10 +110,15 @@ const Team = () => {
       height: 30em;
 
     }
+    
+    @media (min-width: ${screen.xl}px) {
+      width: 100%;
+      height: 29em;
+      padding-bottom: 40px;
+    }
+    
     @media (min-width: ${screen.xxl}px) {
-      height: 50em;
-      padding: 20px;
-
+      height: 55em;
     }
   `;
 
